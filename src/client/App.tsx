@@ -286,6 +286,7 @@ export function App({
               expectedVersion: current().me.submission?.version || 0,
             }));
           }}
+          onPublish={() => send("round.publish", phase)}
         />
       );
     else if (room.phase === "DISCUSSING")

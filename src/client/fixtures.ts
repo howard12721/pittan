@@ -52,6 +52,7 @@ export const fixtureNames = [
   "next-answer",
   "waiting-respondent",
   "waiting-viewer",
+  "publish-ready",
   "discussion-host",
   "discussion-viewer",
   "guessing-host",
@@ -87,6 +88,7 @@ export function fixture(name: string) {
     "next-answer",
     "waiting-respondent",
     "waiting-viewer",
+    "publish-ready",
   ].includes(name);
   const members: RoomView["members"] = names.map((displayName, i) => ({
     memberId: uuid(i + 10),
@@ -177,6 +179,8 @@ export function fixture(name: string) {
             roundNumber: round,
             submittedCount: name.startsWith("waiting")
               ? 8
+              : name === "publish-ready"
+                ? 10
               : name === "next-answer" && innerWidth >= 1024
                 ? 0
                 : 7,
@@ -212,7 +216,8 @@ export function fixture(name: string) {
                 name === "next-answer"
                   ? ""
                   : "深夜のラジオDJ。好きな曲だけ流したい。",
-              submitted: name === "waiting-respondent",
+              submitted:
+                name === "waiting-respondent" || name === "publish-ready",
               version: 0,
             },
           }

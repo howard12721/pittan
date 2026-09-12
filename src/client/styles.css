@@ -471,6 +471,22 @@ progress::-moz-progress-bar {
 .response-status .button {
   width: 100%;
 }
+.response-status-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.publish-wait {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
 .answer-card {
   padding: 24px;
   border: 1px solid var(--border);
@@ -534,6 +550,18 @@ progress::-moz-progress-bar {
 }
 .topic-row.selected {
   border-color: var(--accent);
+}
+.topic-row-button {
+  width: 100%;
+  color: inherit;
+  font: inherit;
+}
+.topic-row-button:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.topic-row-button:active {
+  transform: translateY(1px);
 }
 .topic-number {
   font-size: 20px;
@@ -605,39 +633,37 @@ progress::-moz-progress-bar {
 .guess-row .identity svg {
   color: var(--action);
 }
-.guess-select {
-  display: flex;
-  align-items: center;
-  min-width: 0;
-  flex: 1;
-  position: relative;
-  color: var(--muted);
-}
-.guess-select select {
-  appearance: none;
-  background: none;
-  padding: 0 16px 0 0;
-  width: 100%;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 22px;
-  color: var(--muted);
-}
-.guess-select svg {
-  position: absolute;
-  right: 0;
-  pointer-events: none;
-}
 .guess-row > button {
   display: flex;
   align-items: center;
-  gap: 4px;
+  justify-content: space-between;
+  gap: 8px;
   flex: 1;
+  min-width: 0;
+  min-height: 36px;
   text-align: left;
-  padding: 0;
+  padding: 6px 10px;
+  border: 1px solid #b8d3ee;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.78);
   font-size: 14px;
   color: var(--muted);
   font-weight: 700;
+}
+.guess-row > button > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.guess-row > button:not(:disabled):hover {
+  border-color: var(--action);
+  background: #fff;
+  color: var(--action);
+}
+.guess-row > button:disabled {
+  border-color: transparent;
+  background: transparent;
 }
 .prediction-completion {
   flex: none;
@@ -771,27 +797,62 @@ progress::-moz-progress-bar {
 .candidate-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   overflow: auto;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(220, 238, 255, 0.72), transparent 58%),
+    var(--panel);
 }
 .candidate-list button {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  min-height: 48px;
+  padding: 11px 48px 11px 16px;
+  min-height: 52px;
   flex: none;
-  border-radius: 12px;
-  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 3px 10px rgba(16, 45, 75, 0.06);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   text-align: left;
+  transition:
+    border-color 120ms ease,
+    background 120ms ease,
+    transform 120ms ease;
+}
+.candidate-list button:not(:disabled):hover {
+  border-color: var(--accent);
+  background: #fff;
+  transform: translateY(-1px);
 }
 .candidate-list button[aria-pressed="true"] {
-  background: var(--raised);
+  border-color: var(--action);
+  background: var(--accent-soft);
+  color: var(--action);
+}
+.candidate-list button[aria-pressed="true"]::after {
+  content: "✓";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  translate: 0 -50%;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--action);
+  color: #fff;
+  font-family: "Nunito Variable", sans-serif;
+  font-size: 14px;
 }
 .candidate-list button:disabled {
-  color: var(--text);
+  opacity: 0.42;
 }
 .lobby-page {
   padding: 64px;
@@ -1534,7 +1595,27 @@ progress::-moz-progress-bar {
   .response-status .button {
     width: 108px;
     height: 44px;
+  }
+  .response-status-actions {
     margin-left: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+  .response-status.ready .response-status-actions > .button.secondary {
+    display: none;
+  }
+  .response-status.ready .response-status-actions > .button.primary {
+    width: 144px;
+    padding: 0 12px;
+  }
+  .response-status .publish-wait {
+    max-width: 176px;
+    padding: 4px 8px;
+    border: 0;
+    background: var(--panel);
+    font-size: 12px;
+    line-height: 18px;
   }
   .answer-memo {
     padding: 24px 32px 32px 24px;
@@ -2247,13 +2328,7 @@ progress::-moz-progress-bar {
   .candidate-list > button {
     height: 48px;
     min-height: 48px;
-    padding: 8px 12px;
-  }
-  .candidate-list .avatar {
-    width: 28px;
-    height: 28px;
-    font-size: 18px;
-    line-height: 24px;
+    padding: 8px 48px 8px 12px;
   }
 }
 .sortable-topic.dragging:not([inert]) {

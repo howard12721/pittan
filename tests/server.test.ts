@@ -96,6 +96,10 @@ function game(count = 3) {
         topicId: v.currentRound?.topicId,
         expectedVersion: v.me.submission?.version ?? 0,
       },
+      "round.publish": {
+        hostEpoch: v.host.epoch,
+        expectedPhaseVersion: v.phaseVersion,
+      },
       "prediction.save": { expectedVersion: v.me.prediction?.version },
       "prediction.complete": { expectedVersion: v.me.prediction?.version },
       "prediction.reopen": { expectedVersion: v.me.prediction?.version },
@@ -152,9 +156,24 @@ describe("server-authoritative game", () => {
     expect(viewer.result).toBeUndefined();
     expect(viewer.me.myAnonymousId).toBeUndefined();
     expect(viewer.currentRound?.submittedCount).toBe(1);
+    expect(g.cmd(0, "round.publish").ack.errorCode).toBe("INCOMPLETE");
     expect(
       g.cmd(1, "answer.submit", { text: "PRIVATE-ANSWER-2" }).ack.status,
     ).toBe("applied");
+    expect(g.view(2).phase).toBe("ANSWERING");
+    expect(g.view(2).currentRound?.submittedCount).toBe(2);
+    expect(g.view(2).currentRound?.publishedAnswers).toBeUndefined();
+    expect(() =>
+      g.rooms.history(
+        g.roomId,
+        g.ids[2],
+        g.view().sessionId,
+        "topic",
+        g.view().currentRound!.topicId,
+      ),
+    ).toThrow("NOT_FOUND");
+    expect(g.cmd(1, "round.publish").ack.errorCode).toBe("FORBIDDEN");
+    expect(g.cmd(0, "round.publish").ack.status).toBe("applied");
     expect(g.view(2).phase).toBe("DISCUSSING");
     expect(g.view(2).currentRound?.publishedAnswers).toHaveLength(2);
     for (const answer of g.view(2).currentRound!.publishedAnswers!)
@@ -226,6 +245,7 @@ describe("server-authoritative game", () => {
     ).toBe("VERSION_CONFLICT");
     g.cmd(0, "answer.submit", { text: "one" });
     g.cmd(1, "answer.submit", { text: "two" });
+    expect(g.cmd(0, "round.publish").ack.status).toBe("applied");
     expect(g.cmd(0, "round.next").ack.status).toBe("applied");
     expect(g.view().currentRound?.topicId).toBe(queued[1]);
     expect(g.view().currentRound?.roundNumber).toBe(2);
@@ -279,6 +299,7 @@ describe("server-authoritative game", () => {
     g.start();
     g.cmd(0, "answer.submit", { text: "a" });
     g.cmd(1, "answer.submit", { text: "b" });
+    expect(g.cmd(0, "round.publish").ack.status).toBe("applied");
     g.cmd(0, "guessing.start");
     const mine = g.view().me.myAnonymousId!;
     expect(
@@ -500,6 +521,19 @@ describe("authentication and WebSocket boundary", () => {
         }),
       ),
     );
+    await waitFor(() =>
+      clients.every(
+        (c) =>
+          c.view.phase === "ANSWERING" &&
+          c.view.currentRound?.submittedCount === 10 &&
+          c.view.currentRound.publishedAnswers === undefined,
+      ),
+    );
+    const ready = clients[0].view;
+    await send(0, "round.publish", {
+      hostEpoch: ready.host.epoch,
+      expectedPhaseVersion: ready.phaseVersion,
+    });
     await waitFor(() => clients.every((c) => c.view.phase === "DISCUSSING"));
     expect(clients[0].view.phaseVersion).toBe(2);
     expect(clients[0].view.currentRound?.publishedAnswers).toHaveLength(10);

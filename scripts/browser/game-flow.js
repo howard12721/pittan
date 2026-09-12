@@ -56,6 +56,9 @@ async (page) => {
     await b
       .getByRole("button", { name: "回答を送信する", exact: true })
       .click();
+    await host
+      .getByRole("button", { name: "回答を公開する", exact: true })
+      .click();
     await Promise.all(
       [a, b].map((p) => p.locator(".answer-card").first().waitFor()),
     );
@@ -66,11 +69,8 @@ async (page) => {
       [a, b].map((p) => p.locator(".guess-row").first().waitFor()),
     );
     for (const p of [a, b]) {
-      const select = p.locator(".guess-row select:not([disabled])");
-      const options = await select
-        .locator("option:not([disabled])")
-        .evaluateAll((ns) => ns.map((n) => n.value));
-      await select.selectOption(options[0]);
+      await p.locator(".guess-row>button:not([disabled])").first().click();
+      await p.locator(".candidate-list button:not([disabled])").first().click();
       await p
         .getByRole("button", { name: "予想を完了する", exact: true })
         .click();

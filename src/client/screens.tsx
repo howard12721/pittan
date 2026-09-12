@@ -91,6 +91,7 @@ export function AnswerScreen({
   busy,
   onSubmit,
   onWithdraw,
+  onPublish,
   onHistory,
   onPost,
 }: {
@@ -98,6 +99,7 @@ export function AnswerScreen({
   busy: boolean;
   onSubmit: (text: string) => void;
   onWithdraw: () => void;
+  onPublish: () => void;
   onHistory: () => void;
   onPost: () => void;
 }) {
@@ -150,7 +152,10 @@ export function AnswerScreen({
       <ResponseStatus
         count={round.submittedCount}
         total={round.requiredCount}
+        host={room.me.isHost}
+        busy={busy}
         onPost={onPost}
+        onPublish={onPublish}
       />
     </main>
   );
@@ -318,6 +323,9 @@ export function GuessingScreen({
   const prediction = room.me.prediction,
     choices = prediction?.choices || {},
     used = Object.values(choices).filter((v): v is string => !!v),
+    candidates = room.respondents.filter(
+      (person) => person.memberId !== room.me.memberId,
+    ),
     disabled = busy || !!prediction?.completed || !room.me.guessEligible;
   const complete = !!prediction?.completed,
     canComplete = room.identities.every((i) => choices[i.anonymousId]);
@@ -326,13 +334,10 @@ export function GuessingScreen({
       key={id}
       id={id}
       value={choices[id]}
-      people={room.respondents}
-      used={used}
+      people={candidates}
       disabled={disabled}
       self={id === room.me.myAnonymousId}
-      mobile={mobile}
       onOpen={() => setPicking(id)}
-      onChange={(memberId) => onChoices({ ...choices, [id]: memberId })}
     />
   );
   const completion = (
@@ -395,9 +400,9 @@ export function GuessingScreen({
         </>
       )}
       {picking && (
-        <Modal title="正体を選ぶ" onClose={() => setPicking(undefined)}>
+        <Modal title="回答者を選択" onClose={() => setPicking(undefined)}>
           <div className="candidate-list">
-            {room.respondents.map((p) => (
+            {candidates.map((p) => (
               <button
                 key={p.memberId}
                 aria-pressed={choices[picking] === p.memberId}
@@ -409,8 +414,7 @@ export function GuessingScreen({
                   setPicking(undefined);
                 }}
               >
-                <Avatar initial={p.avatarInitial} src={p.avatarUrl} />
-                {p.displayName}
+                {p.username}
               </button>
             ))}
           </div>

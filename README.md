@@ -1,6 +1,6 @@
 # pittan
 
-Figmaを基準にしたDiscord Activity。React / TypeScript / ViteのUIと、Fastify / WebSocket / SQLiteのサーバーを一つのDockerイメージにまとめています。回答は全員提出後に一斉公開し、匿名の正体を予想して結果を振り返ります。
+Figmaを基準にしたDiscord Activity。React / TypeScript / ViteのUIと、Fastify / WebSocket / SQLiteのサーバーを一つのDockerイメージにまとめています。回答は全員提出後、ホストの操作で一斉公開し、匿名の正体を予想して結果を振り返ります。
 
 実装の方針は[ARCHITECTURE.md](ARCHITECTURE.md)、判断の履歴は[design-docs](docs/design-docs/)、実施済み・未実施の検証は[005-verification.md](docs/design-docs/005-verification.md)を参照してください。
 

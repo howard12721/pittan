@@ -139,6 +139,23 @@ try {
     }),
   );
   await until(() =>
+    Array.from({ length: 10 }, (_, room) => clients[room * 32]).every(
+      (client) =>
+        client.view.phase === "ANSWERING" &&
+        client.view.currentRound?.submittedCount === 10,
+    ),
+  );
+  await Promise.all(
+    Array.from({ length: 10 }, (_, room) => {
+      const host = room * 32,
+        view = clients[host].view;
+      return send(host, "round.publish", {
+        hostEpoch: view.host.epoch,
+        expectedPhaseVersion: view.phaseVersion,
+      });
+    }),
+  );
+  await until(() =>
     clients.every(
       (c) =>
         c.view.phase === "DISCUSSING" &&

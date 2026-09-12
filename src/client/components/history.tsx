@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { IconChevronDown } from "@tabler/icons-react";
 import type { AnonymousId, HistoryView, RoomView } from "../../shared/protocol";
 import type { GameConnection } from "../connection";
+import { historyCacheIsFresh, mergeHistoryRefresh } from "../history-cache";
 import { Avatar, Button, Identity, Modal, QuestionHeading } from "./primitives";
 import { AnswerCard, TopicRow } from "./game";
 
@@ -9,6 +10,18 @@ export type HistorySelection = {
   mode: "topic" | "respondent";
   subject: string;
 };
+
+const historyCaches = new WeakMap<GameConnection, Map<string, HistoryView>>();
+
+function cacheFor(connection: GameConnection) {
+  let cache = historyCaches.get(connection);
+  if (!cache) {
+    cache = new Map();
+    historyCaches.set(connection, cache);
+  }
+  return cache;
+}
+
 export function HistoryBrowser({
   room,
   connection,
@@ -31,21 +44,49 @@ export function HistoryBrowser({
     [picker, setPicker] = useState(false),
     loading = useRef(false),
     generation = useRef(0),
+    handledReload = useRef(0),
+    previousSelection = useRef(""),
     scroll = useRef<HTMLDivElement>(null);
   const { mode, subject } = selection,
     topics = room.topics.filter((t) => t.status === "published"),
-    revealed = room.phase === "REVEALED";
+    revealed = room.phase === "REVEALED",
+    visibility = revealed ? "revealed" : "anonymous",
+    cache = cacheFor(connection),
+    cacheKey = `${room.sessionId}:${visibility}:${mode}:${subject}`;
+  const matchesSelection = (value?: HistoryView) =>
+      value?.sessionId === room.sessionId &&
+      value.visibility === visibility &&
+      value.view === mode &&
+      value.subject === subject,
+    displayed = matchesSelection(data) ? data : cache.get(cacheKey);
   useEffect(() => {
     const current = ++generation.current;
+    for (const key of cache.keys())
+      if (!key.startsWith(`${room.sessionId}:`)) cache.delete(key);
+    const force = handledReload.current !== reload,
+      cached = cache.get(cacheKey),
+      fresh = historyCacheIsFresh(cached, mode, room.historyVersion);
+    handledReload.current = reload;
+    if (previousSelection.current !== cacheKey) {
+      previousSelection.current = cacheKey;
+      scroll.current?.scrollTo(0, 0);
+    }
+    if (cached) setData(cached);
+    else setData(undefined);
+    if (!subject || (fresh && !force)) {
+      loading.current = false;
+      return;
+    }
     loading.current = true;
-    setData(undefined);
-    scroll.current?.scrollTo(0, 0);
-    if (!subject) return;
     void connection
       .history(mode, subject)
       .then(
         (value) => {
-          if (generation.current === current) setData(value);
+          if (generation.current === current && matchesSelection(value)) {
+            const updated = mergeHistoryRefresh(cached, value);
+            cache.set(cacheKey, updated);
+            setData(updated);
+          }
         },
         () => {
           if (generation.current === current)
@@ -58,20 +99,32 @@ export function HistoryBrowser({
     return () => {
       generation.current++;
     };
-  }, [connection, room.sessionId, room.historyVersion, mode, subject, reload]);
+  }, [
+    connection,
+    room.sessionId,
+    room.historyVersion,
+    visibility,
+    mode,
+    subject,
+    cacheKey,
+    reload,
+  ]);
   function loadMore() {
-    if (loading.current || data?.nextCursor == null) return;
+    if (loading.current || displayed?.nextCursor == null) return;
     loading.current = true;
     const current = generation.current;
     void connection
-      .history(mode, subject, data.nextCursor)
+      .history(mode, subject, displayed.nextCursor)
       .then(
         (next) => {
-          if (generation.current === current)
-            setData(
-              (old) =>
-                old && { ...next, entries: [...old.entries, ...next.entries] },
-            );
+          if (generation.current === current && matchesSelection(next)) {
+            const merged = {
+              ...next,
+              entries: [...displayed.entries, ...next.entries],
+            };
+            cache.set(cacheKey, merged);
+            setData(merged);
+          }
         },
         () => {
           if (generation.current === current) onError(loadMore);
@@ -164,7 +217,7 @@ export function HistoryBrowser({
               </QuestionHeading>
             )}
             <div ref={scroll} className="history-answer-grid scroll">
-              {data?.entries[0]?.answers.map((a) => (
+              {displayed?.entries[0]?.answers.map((a) => (
                 <AnswerCard
                   key={a.anonymousId}
                   answer={a}
@@ -197,7 +250,7 @@ export function HistoryBrowser({
                   loadMore();
               }}
             >
-              {data?.entries.map((entry) => (
+              {displayed?.entries.map((entry) => (
                 <article key={entry.topicId} className="respondent-answer">
                   <QuestionHeading number={entry.roundNumber}>
                     {entry.question}

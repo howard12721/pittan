@@ -73,6 +73,7 @@ export const CommandSchema = z.discriminatedUnion("name", [
     expectedVersion: Version,
   }),
   command("answer.withdraw", { topicId: Id, expectedVersion: Version }),
+  command("round.publish", phase),
   command("round.next", { ...phase, expectedQueueVersion: Version }),
   command("guessing.start", phase),
   command("prediction.save", prediction),

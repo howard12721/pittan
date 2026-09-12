@@ -1,4 +1,4 @@
-import { useRef, type ReactNode } from "react";
+import type { ReactNode } from "react";
 import {
   IconChevronDown,
   IconGripVertical,
@@ -133,24 +133,41 @@ export function CharacterCount({ text, max }: { text: string; max: number }) {
 export function ResponseStatus({
   count,
   total,
+  host,
+  busy,
   onPost,
+  onPublish,
 }: {
   count: number;
   total: number;
+  host: boolean;
+  busy: boolean;
   onPost: () => void;
+  onPublish: () => void;
 }) {
+  const ready = total > 0 && count === total;
   return (
-    <section className="response-status">
+    <section className={`response-status ${ready ? "ready" : ""}`}>
       <h3>回答状況</h3>
       <strong>
         {count} / {total}
       </strong>
       <progress value={count} max={Math.max(1, total)} />
-      <Button variant="secondary" onClick={onPost}>
-        <IconPlus size={18} aria-hidden />
-        <span className="pc-only">お題を投稿</span>
-        <span className="mobile-only">お題</span>
-      </Button>
+      <div className="response-status-actions">
+        {ready &&
+          (host ? (
+            <Button disabled={busy} onClick={onPublish}>
+              回答を公開する
+            </Button>
+          ) : (
+            <p className="publish-wait">ホストの公開を待っています</p>
+          ))}
+        <Button variant="secondary" onClick={onPost}>
+          <IconPlus size={18} aria-hidden />
+          <span className="pc-only">お題を投稿</span>
+          <span className="mobile-only">お題</span>
+        </Button>
+      </div>
     </section>
   );
 }
@@ -195,21 +212,31 @@ export function TopicRow({
   onSelect?: () => void;
   controls?: ReactNode;
 }) {
+  const content = (
+    <>
+      <span className="topic-number">
+        {String(topic.displayNumber).padStart(2, "0")}
+      </span>
+      <b className="topic-text">{topic.text}</b>
+      {controls}
+    </>
+  );
+  if (onSelect)
+    return (
+      <button
+        type="button"
+        className={`topic-row topic-row-button ${selected ? "selected" : ""}`}
+        aria-pressed={selected}
+        onClick={onSelect}
+      >
+        {content}
+      </button>
+    );
   return (
     <div
       className={`topic-row ${selected ? "selected" : ""} ${controls ? "with-controls" : ""}`}
     >
-      <span className="topic-number">
-        {String(topic.displayNumber).padStart(2, "0")}
-      </span>
-      {onSelect ? (
-        <button className="topic-text" onClick={onSelect}>
-          {topic.text}
-        </button>
-      ) : (
-        <b className="topic-text">{topic.text}</b>
-      )}
-      {controls}
+      {content}
     </div>
   );
 }
@@ -256,9 +283,6 @@ export function GuessRow({
   people,
   disabled,
   self,
-  used,
-  mobile,
-  onChange,
   onOpen,
 }: {
   id: AnonymousId;
@@ -266,46 +290,24 @@ export function GuessRow({
   people: RoomView["respondents"];
   disabled?: boolean;
   self?: boolean;
-  used: string[];
-  mobile?: boolean;
-  onChange: (memberId: string) => void;
   onOpen: () => void;
 }) {
-  const current = people.find((p) => p.memberId === value),
-    select = useRef<HTMLSelectElement>(null);
+  const current = people.find((p) => p.memberId === value);
   return (
     <div className="guess-row">
       <Identity id={id} />
-      {mobile ? (
-        <button disabled={disabled || self} onClick={onOpen}>
-          {current?.displayName || "誰だと思う？"}
-          {!self && <IconChevronDown size={14} aria-hidden />}
-        </button>
-      ) : (
-        <div className="guess-select">
-          <select
-            ref={select}
-            aria-label={`${id} 正体を選択`}
-            value={value || ""}
-            disabled={disabled || self}
-            onChange={(e) => onChange(e.target.value)}
-          >
-            <option value="" disabled>
-              誰だと思う？
-            </option>
-            {people.map((p) => (
-              <option
-                key={p.memberId}
-                value={p.memberId}
-                disabled={used.includes(p.memberId) && p.memberId !== value}
-              >
-                {p.displayName}
-              </option>
-            ))}
-          </select>
-          {!self && <IconChevronDown size={12} aria-hidden />}
-        </div>
-      )}
+      <button
+        className="guess-choice"
+        aria-label={`${id} 回答者を選択`}
+        aria-haspopup="dialog"
+        disabled={disabled || self}
+        onClick={onOpen}
+      >
+        <span>
+          {self ? "自分" : current?.username || "回答者を選択"}
+        </span>
+        {!self && <IconChevronDown size={14} aria-hidden />}
+      </button>
     </div>
   );
 }

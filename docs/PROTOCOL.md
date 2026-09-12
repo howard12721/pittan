@@ -130,7 +130,7 @@ RoomViewはcurrent sessionだけを含み、過去お題の回答本文は含め
 - REVEALEDでは同じ応答へmemberId・displayName・avatarInitial・avatarUrlを付加する。avatarUrlはDiscord CDNのプロフィール画像または既定画像に限定し、未取得の場合は省略する。匿名回答へは付加しない。
 - current未公開のお題、他room、旧sessionの要求は拒否する。
 - 応答にはsessionId、historyVersion、visibility（anonymous / revealed）を付ける。
-- clientのキャッシュキーはsessionId + visibility + view + subject + cursor。historyVersionが変わればinvalidateする。
+- clientのキャッシュキーはsessionId + visibility + view + subject。お題別履歴は公開後不変なので同じvisibilityの間は再利用する。回答者別履歴は新しいお題の公開で先頭に回答が増えるため、historyVersionが変わったときだけ保持中の表示を残したまま背景更新する。追加ページも結合後の結果を同じキーへ保存する。
 - current sessionの変更時は旧履歴キャッシュを破棄する。遅れて到着した旧sessionのHTTP応答は描画しない。
 - GUESSINGでは履歴選択を変えても右の予想パネルをunmountしない。
 
@@ -149,6 +149,7 @@ H = 現在のホスト、M = 参加者、R = セッション開始時の回答�
 | session.start | H | LOBBY、2人以上・お題あり | expectedPhaseVersion、expectedQueueVersion、hostEpoch |
 | answer.submit | R | ANSWERING、currentのお題のみ、未提出 | topicId、text、expectedVersion |
 | answer.withdraw | R | ANSWERING、自分の提出済み回答 | topicId、expectedVersion |
+| round.publish | H | ANSWERING、全回答者が提出済み | expectedPhaseVersion、hostEpoch |
 | round.next | H | DISCUSSING、queuedがある | expectedPhaseVersion、expectedQueueVersion、hostEpoch |
 | guessing.start | H | DISCUSSING | expectedPhaseVersion、hostEpoch |
 | prediction.save | G | GUESSING、未完了 | choices全体、expectedVersion |
@@ -171,7 +172,7 @@ answerの初期versionは0。提出・取消ごとに増やす。予想はpredic
 
 | 競合 | 正しい結果 |
 | --- | --- |
-| 最後の提出と取消 | DBで先にcommitした操作に従う。公開後は取消不可 |
+| 公開と取消 | DBで先にcommitした操作に従う。取消が先なら公開をINCOMPLETEで拒否し、公開後は取消不可 |
 | 同じ回答の二重送信 | 同じcommandIdは同じACK。異なるIDはversionで拒否。回答数は1件 |
 | D&D中にお題が投稿された | queueVersion不一致で並べ替えを拒否。最新一覧へ戻し、再操作してもらう |
 | お題削除と次のお題開始 | 先のtransactionだけ成立。currentのお題は削除不可 |

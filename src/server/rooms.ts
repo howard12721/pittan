@@ -691,25 +691,6 @@ export class Rooms {
                 memberId,
                 command.payload.text,
               );
-              const count = one<{ n: number }>(
-                this.db,
-                "SELECT count(*) AS n FROM answers WHERE topic_id=? AND submitted=1",
-                s.current_topic_id,
-              )!.n;
-              if (
-                count === seats.filter((x) => x.role === "respondent").length
-              ) {
-                run(
-                  this.db,
-                  "UPDATE topics SET status='published' WHERE topic_id=?",
-                  s.current_topic_id,
-                );
-                run(
-                  this.db,
-                  "UPDATE sessions SET phase='DISCUSSING',phase_version=phase_version+1,history_version=history_version+1 WHERE session_id=?",
-                  s.session_id,
-                );
-              }
             } else {
               check(answer?.submitted, "INVALID_INPUT");
               run(
@@ -719,6 +700,29 @@ export class Rooms {
                 memberId,
               );
             }
+            break;
+          }
+          case "round.publish": {
+            inPhase("ANSWERING");
+            const submitted = one<{ n: number }>(
+              this.db,
+              "SELECT count(*) AS n FROM answers WHERE topic_id=? AND submitted=1",
+              s.current_topic_id,
+            )!.n;
+            check(
+              submitted === seats.filter((x) => x.role === "respondent").length,
+              "INCOMPLETE",
+            );
+            run(
+              this.db,
+              "UPDATE topics SET status='published',version=version+1 WHERE topic_id=?",
+              s.current_topic_id,
+            );
+            run(
+              this.db,
+              "UPDATE sessions SET phase='DISCUSSING',phase_version=phase_version+1,history_version=history_version+1 WHERE session_id=?",
+              s.session_id,
+            );
             break;
           }
           case "round.next":
