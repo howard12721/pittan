@@ -36,7 +36,7 @@ export function ParticipantList({ members }: { members: RoomView["members"] }) {
       <div className="participant-list scroll">
         {visible.map((m) => (
           <div className="participant" key={m.memberId}>
-            <Avatar initial={m.avatarInitial} />
+            <Avatar initial={m.avatarInitial} src={m.avatarUrl} />
             <span>{m.displayName}</span>
             <RoleIcon role={m.role} />
           </div>
@@ -166,7 +166,10 @@ export function AnswerCard({
       <div className="answer-identity">
         {answer.displayName ? (
           <>
-            <Avatar initial={answer.avatarInitial || ""} />
+            <Avatar
+              initial={answer.avatarInitial || ""}
+              src={answer.avatarUrl}
+            />
             <div className="revealed-person">
               <b>{answer.displayName}</b>
               <Identity id={answer.anonymousId} />
@@ -364,7 +367,7 @@ export function RevealRow({
   return (
     <div className="reveal-row">
       <Identity id={id} />
-      <Avatar initial={person.avatarInitial} />
+      <Avatar initial={person.avatarInitial} src={person.avatarUrl} />
       <b>{person.displayName}</b>
     </div>
   );

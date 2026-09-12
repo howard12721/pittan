@@ -1,0 +1,13 @@
+# Discordのプロフィール画像
+
+2026-09-12、ユーザー指定でPlayerAvatarのイニシャルをDiscordのプロフィール画像に変更する。既存の丸枠の寸法・配置は保つ。新しい文言や補助UIは追加しない。
+
+サーバーが既存のidentify認証で取得する/users/@meのid・avatarを使い、Discord CDNの128px PNG URLを作る。画像未設定のユーザーにはDiscordの既定画像を使う。アニメーション画像も今回は静止PNGとして表示する。これはアカウントのプロフィール画像であり、サーバー別プロフィール画像を取得する追加スコープは要求しない。[Discord公式の表示例](https://docs.discord.com/developers/activities/development-guides/multiplayer-experience#render-avatars-and-names)、[CDNと既定画像の仕様](https://docs.discord.com/developers/reference#image-formatting)
+
+avatarUrlをauth_sessions・room_members・session_membersへ保存するschema v2を追加する。既存DBはnullable列を追加して移行するため、既存データを保持する。名前と同様、セッション開始時の画像URLをセッションに固定する。画像ファイル自体はDBや自宅サーバーへ保存しない。
+
+参加者一覧、人物の選択肢、正解発表と公開後の履歴へ適用する。匿名回答と匿名履歴にはavatarUrlを送らない。URLはDiscord CDNの既知のパスに限定する。画像読込失敗時には既存のイニシャル表示へ戻す。
+
+通常のFigma比較fixtureはイニシャルを維持する。開発時は`?fixture=lobby&avatars=1`などでDiscord既定画像を使う表示例を確認できる。実際のユーザー画像はDiscordで認証した場合に取得される。
+
+検証: 13件の自動テストと本番ビルドが成功。OAuth応答から入室までの画像URL保持、画像未設定の新旧ユーザー、v1 DBからの移行と再起動、匿名履歴への非開示を確認した。ChromiumのPC・Mobile幅で4画面ずつDiscord CDN画像の読込み・丸枠の寸法を確認し、画像通信を失敗させるとイニシャルへ戻ることも確認した。Discordの実機iframeでの認証と表示は未実施。

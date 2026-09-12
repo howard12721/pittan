@@ -14,7 +14,12 @@ import {
   type RoomView,
 } from "../shared/protocol.js";
 
-export type Profile = { userId: string; displayName: string; username: string };
+export type Profile = {
+  userId: string;
+  displayName: string;
+  username: string;
+  avatarUrl?: string;
+};
 export type Room = {
   room_id: string;
   instance_id: string;
@@ -38,6 +43,7 @@ type Member = {
   discord_user_id: string;
   display_name: string;
   username: string;
+  avatar_url: string | null;
   lobby_role: Role;
   version: number;
   joined_at: number;
@@ -48,6 +54,7 @@ type Seat = {
   anonymous_id: AnonymousId | null;
   display_name: string;
   username: string;
+  avatar_url: string | null;
   guess_eligible: number;
 };
 type Topic = {
@@ -197,30 +204,33 @@ export class Rooms {
       if (existing)
         run(
           this.db,
-          "UPDATE room_members SET display_name=?,username=? WHERE member_id=?",
+          "UPDATE room_members SET display_name=?,username=?,avatar_url=? WHERE member_id=?",
           profile.displayName,
           profile.username,
+          profile.avatarUrl ?? null,
           id,
         );
       else
         run(
           this.db,
-          "INSERT INTO room_members(member_id,room_id,discord_user_id,display_name,username,joined_at) VALUES(?,?,?,?,?,?)",
+          "INSERT INTO room_members(member_id,room_id,discord_user_id,display_name,username,joined_at,avatar_url) VALUES(?,?,?,?,?,?,?)",
           id,
           room.room_id,
           profile.userId,
           profile.displayName,
           profile.username,
           this.now(),
+          profile.avatarUrl ?? null,
         );
       if (s.phase !== "LOBBY" && !seats.some((x) => x.member_id === id)) {
         run(
           this.db,
-          "INSERT INTO session_members(session_id,member_id,role,display_name,username) VALUES(?,?,'viewer',?,?)",
+          "INSERT INTO session_members(session_id,member_id,role,display_name,username,avatar_url) VALUES(?,?,'viewer',?,?,?)",
           s.session_id,
           id,
           profile.displayName,
           profile.username,
+          profile.avatarUrl ?? null,
         );
       }
       this.bump(room.room_id);
@@ -274,6 +284,7 @@ export class Rooms {
               memberId: m.member_id,
               displayName: m.display_name,
               avatarInitial: initial(m.display_name),
+              avatarUrl: m.avatar_url ?? undefined,
               role: m.lobby_role,
               online: live.has(m.member_id),
             }))
@@ -281,6 +292,7 @@ export class Rooms {
             memberId: m.member_id,
             displayName: m.display_name,
             avatarInitial: initial(m.display_name),
+            avatarUrl: m.avatar_url ?? undefined,
             role: m.role,
             online: live.has(m.member_id),
           }));
@@ -302,6 +314,7 @@ export class Rooms {
         displayName: m.display_name,
         username: m.username,
         avatarInitial: initial(m.display_name),
+        avatarUrl: m.avatar_url ?? undefined,
       })),
       identities: identities.map((i) => ({ anonymousId: i.anonymousId })),
       topics: topics.map((t) => ({
@@ -440,6 +453,7 @@ export class Rooms {
                     memberId: m.member_id,
                     displayName: m.display_name,
                     avatarInitial: initial(m.display_name),
+                    avatarUrl: m.avatar_url ?? undefined,
                   }
                 : {}),
             };
@@ -630,7 +644,7 @@ export class Rooms {
             for (const m of live)
               run(
                 this.db,
-                "INSERT INTO session_members(session_id,member_id,role,anonymous_id,display_name,username) VALUES(?,?,?,?,?,?)",
+                "INSERT INTO session_members(session_id,member_id,role,anonymous_id,display_name,username,avatar_url) VALUES(?,?,?,?,?,?,?)",
                 s.session_id,
                 m.member_id,
                 m.lobby_role,
@@ -638,6 +652,7 @@ export class Rooms {
                   ?.anonymousId ?? null,
                 m.display_name,
                 m.username,
+                m.avatar_url,
               );
             run(
               this.db,

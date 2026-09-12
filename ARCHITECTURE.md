@@ -288,7 +288,7 @@ SDKの役割はDiscord内の起動・認可・クライアント連携。ゲー�
 
 入室時はサーバーがBot tokenでActivity Instance APIを呼び、application_id、instance_id、usersを確認する。クライアント申告のuserId・channelId・ホストフラグは権限判定に使わない。APIのusersに本人がいなければ入室を許可しない。[Activity Instance API](https://docs.discord.com/developers/resources/application#get-application-activity-instance)
 
-全クライアント通信は同じActivity Proxy originを経由する。Developer PortalのURL Mappingでルートを自宅サーバーのHTTPS公開先へ向け、/apiと/wsも同じ経路にする。アセット・フォントは自前配信する。第三者cookieに依存しない認証方式を選ぶ。[Discord Networking](https://docs.discord.com/developers/activities/development-guides/networking)
+アプリのAPI・WebSocket通信は同じActivity Proxy originを経由する。Developer PortalのURL Mappingでルートを自宅サーバーのHTTPS公開先へ向け、/apiと/wsも同じ経路にする。UI素材・フォントは自前配信し、ユーザーのプロフィール画像はDiscord公式CDNから表示する。第三者cookieには依存しない。[Discord Networking](https://docs.discord.com/developers/activities/development-guides/networking)
 
 通信エンドポイント・token寿命・在室の再確認・失敗時の扱いは[通信契約](docs/PROTOCOL.md)にまとめた。
 

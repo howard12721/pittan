@@ -99,8 +99,8 @@ RoomView
   wireVersion, roomId, revision, serverTime
   sessionId, phase, phaseVersion, queueVersion, historyVersion
   host: { memberId, epoch }
-  members: [{ memberId, displayName, avatarInitial, role, online }]
-  respondents: [{ memberId, displayName, username, avatarInitial }]
+  members: [{ memberId, displayName, avatarInitial, avatarUrl?, role, online }]
+  respondents: [{ memberId, displayName, username, avatarInitial, avatarUrl? }]
   identities: [{ anonymousId, symbolKey }]
   topics: [{ topicId, text, status, displayNumber, roundNumber? }]
   currentRound: null | {
@@ -127,7 +127,7 @@ RoomViewはcurrent sessionだけを含み、過去お題の回答本文は含め
 
 - view=topic / subject=topicId: 公開済みのお題と、匿名ID順の全回答を返す。
 - view=respondent / subject=anonymousId: その匿名IDの公開済み回答をroundNumber順に返す。初回20件、最大50件、cursorで続きを取得できる。
-- REVEALEDでは同じ応答へmemberId・displayName・avatarInitialを付加する。
+- REVEALEDでは同じ応答へmemberId・displayName・avatarInitial・avatarUrlを付加する。avatarUrlはDiscord CDNのプロフィール画像または既定画像に限定し、未取得の場合は省略する。匿名回答へは付加しない。
 - current未公開のお題、他room、旧sessionの要求は拒否する。
 - 応答にはsessionId、historyVersion、visibility（anonymous / revealed）を付ける。
 - clientのキャッシュキーはsessionId + visibility + view + subject + cursor。historyVersionが変わればinvalidateする。

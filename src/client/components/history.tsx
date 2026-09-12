@@ -109,7 +109,10 @@ export function HistoryBrowser({
           >
             {revealed && personFor(i.anonymousId) && (
               <>
-                <Avatar initial={personFor(i.anonymousId)!.avatarInitial} />
+                <Avatar
+                  initial={personFor(i.anonymousId)!.avatarInitial}
+                  src={personFor(i.anonymousId)!.avatarUrl}
+                />
                 <b>{personFor(i.anonymousId)!.displayName}</b>
               </>
             )}
@@ -174,7 +177,10 @@ export function HistoryBrowser({
           <>
             <div className="respondent-heading">
               {revealed && personFor(subject) ? (
-                <Avatar initial={personFor(subject)!.avatarInitial} />
+                <Avatar
+                  initial={personFor(subject)!.avatarInitial}
+                  src={personFor(subject)!.avatarUrl}
+                />
               ) : (
                 <Identity id={subject as AnonymousId} />
               )}

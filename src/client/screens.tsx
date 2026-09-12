@@ -409,7 +409,7 @@ export function GuessingScreen({
                   setPicking(undefined);
                 }}
               >
-                <Avatar initial={p.avatarInitial} />
+                <Avatar initial={p.avatarInitial} src={p.avatarUrl} />
                 {p.displayName}
               </button>
             ))}

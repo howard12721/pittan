@@ -2,6 +2,7 @@ import {
   useEffect,
   useId,
   useRef,
+  useState,
   type ButtonHTMLAttributes,
   type ReactNode,
 } from "react";
@@ -72,10 +73,20 @@ export function Identity({
     </span>
   );
 }
-export function Avatar({ initial }: { initial: string }) {
+export function Avatar({ initial, src }: { initial: string; src?: string }) {
+  const [failedSrc, setFailedSrc] = useState<string>();
   return (
     <span className="avatar" aria-hidden>
-      {initial}
+      {src && src !== failedSrc ? (
+        <img
+          src={src}
+          alt=""
+          referrerPolicy="no-referrer"
+          onError={() => setFailedSrc(src)}
+        />
+      ) : (
+        initial
+      )}
     </span>
   );
 }

@@ -19,7 +19,7 @@ export function openDatabase(path: string) {
         n: number | null;
       }
     ).n ?? 0;
-  if (version > 1)
+  if (version > 2)
     throw new Error("Database schema is newer than this application");
   if (version === 0)
     db.transaction(() => {
@@ -94,6 +94,15 @@ export function openDatabase(path: string) {
       CREATE INDEX sessions_retired ON sessions(retired_at);
     `);
       db.prepare("INSERT INTO schema_migrations VALUES (1, ?)").run(Date.now());
+    })();
+  if (version < 2)
+    db.transaction(() => {
+      db.exec(`
+        ALTER TABLE auth_sessions ADD COLUMN avatar_url TEXT;
+        ALTER TABLE room_members ADD COLUMN avatar_url TEXT;
+        ALTER TABLE session_members ADD COLUMN avatar_url TEXT;
+      `);
+      db.prepare("INSERT INTO schema_migrations VALUES (2, ?)").run(Date.now());
     })();
   return db;
 }

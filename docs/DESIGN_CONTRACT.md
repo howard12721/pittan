@@ -98,7 +98,7 @@ Figmaの画面は状態の見本であり、実行可能なゲームルールの
 | PredictionCompletion | 86:7ほか | 完了人数、完了ボタン、完了取消 |
 | TopicRow | 11:2 / 114:2081 | 表示番号、本文、任意のdragハンドル・削除 |
 | IdentityRevealRow | 13:2 | 匿名IDと正体の対応 |
-| PlayerAvatar | 103:12 | 現デザインのイニシャル入り丸型。勝手に写真へ変更しない |
+| PlayerAvatar | 103:12 | 丸枠の寸法を維持。2026-09-12のユーザー指定でDiscordプロフィール画像を表示し、読込失敗時は既存のイニシャルに戻す |
 | MobileBrandHeader | 128:2 | 上部ブランド48px。画面切替は下部へ |
 | MobileBottomNavigation | 139:1359 / item 150:65 | アイコン24px、ラベル12px、操作領域64px + 実セーフエリア |
 | MobileQuestion / FoldedMemo | 128:25 / 129:15 / 129:2290 | Qは48px、本文18/28、折り返し32px、待機と共通背景 |

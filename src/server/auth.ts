@@ -8,9 +8,18 @@ export const hashToken = (token: string) =>
   createHash("sha256").update(token).digest("hex");
 const api = "https://discord.com/api/v10";
 const profileSchema = z.object({
-  id: z.string(),
+  id: z.string().regex(/^\d{1,20}$/),
   username: z.string(),
   global_name: z.string().nullable().optional(),
+  avatar: z
+    .string()
+    .regex(/^(a_)?[a-f0-9]{32}$/)
+    .nullable()
+    .optional(),
+  discriminator: z
+    .string()
+    .regex(/^\d{1,4}$/)
+    .optional(),
 });
 const instanceSchema = z.object({
   application_id: z.string(),
@@ -51,12 +60,13 @@ export class Auth {
       expiresAt = this.now() + 8 * 60 * 60 * 1000;
     run(
       this.db,
-      "INSERT INTO auth_sessions VALUES(?,?,?,?,?)",
+      "INSERT INTO auth_sessions(token_hash,discord_user_id,display_name,username,expires_at,avatar_url) VALUES(?,?,?,?,?,?)",
       hashToken(token),
       profile.userId,
       displayText(profile.displayName),
       displayText(profile.username),
       expiresAt,
+      profile.avatarUrl ?? null,
     );
     return { sessionToken: token, expiresAt };
   }
@@ -66,6 +76,7 @@ export class Auth {
       display_name: string;
       username: string;
       expires_at: number;
+      avatar_url: string | null;
     }>(this.db, "SELECT * FROM auth_sessions WHERE token_hash=?", tokenHash);
     check(r, "UNAUTHENTICATED", 401);
     check(r.expires_at > this.now(), "AUTH_EXPIRED", 401);
@@ -73,6 +84,7 @@ export class Auth {
       userId: r.discord_user_id,
       displayName: r.display_name,
       username: r.username,
+      avatarUrl: r.avatar_url ?? undefined,
       expiresAt: r.expires_at,
       tokenHash,
     };
@@ -103,11 +115,19 @@ export class Auth {
       headers: { Authorization: `Bearer ${token.access_token}` },
     });
     const user = profileSchema.parse(await userResponse.json());
+    const defaultIndex =
+      user.discriminator && user.discriminator !== "0"
+        ? Number(user.discriminator) % 5
+        : Number((BigInt(user.id) >> 22n) % 6n);
+    const avatarUrl = user.avatar
+      ? `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=128`
+      : `https://cdn.discordapp.com/embed/avatars/${defaultIndex}.png`;
     return {
       ...this.issue({
         userId: user.id,
         displayName: user.global_name || user.username,
         username: user.username,
+        avatarUrl,
       }),
       accessToken: token.access_token,
     };

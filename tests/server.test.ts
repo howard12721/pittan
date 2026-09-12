@@ -41,6 +41,7 @@ function game(count = 3) {
       userId: `u${i}`,
       displayName: `user${i}`,
       username: `user${i}`,
+      avatarUrl: `https://cdn.discordapp.com/embed/avatars/${i % 6}.png`,
     }),
   );
   const roomId = joined[0].roomId;
@@ -138,6 +139,9 @@ function game(count = 3) {
 describe("server-authoritative game", () => {
   it("publishes atomically, never exposes a private answer or identity, scores and restarts", () => {
     const g = game();
+    expect(
+      g.view().members.find((m) => m.memberId === g.ids[0])?.avatarUrl,
+    ).toBe("https://cdn.discordapp.com/embed/avatars/0.png");
     g.start();
     expect(
       g.cmd(0, "answer.submit", { text: "PRIVATE-ANSWER-1" }).ack.status,
@@ -153,6 +157,17 @@ describe("server-authoritative game", () => {
     ).toBe("applied");
     expect(g.view(2).phase).toBe("DISCUSSING");
     expect(g.view(2).currentRound?.publishedAnswers).toHaveLength(2);
+    for (const answer of g.view(2).currentRound!.publishedAnswers!)
+      expect(Object.keys(answer).sort()).toEqual(["anonymousId", "text"]);
+    const anonymousHistory = g.rooms.history(
+      g.roomId,
+      g.ids[2],
+      g.view().sessionId,
+      "topic",
+      g.view().currentRound!.topicId,
+    );
+    for (const answer of anonymousHistory.entries[0].answers)
+      expect(Object.keys(answer).sort()).toEqual(["anonymousId", "text"]);
     expect(g.cmd(0, "answer.withdraw").ack.errorCode).toBe("PHASE_CHANGED");
     expect(g.cmd(2, "guessing.start").ack.errorCode).toBe("FORBIDDEN");
     expect(g.cmd(0, "guessing.start").ack.status).toBe("applied");
@@ -168,6 +183,19 @@ describe("server-authoritative game", () => {
     expect(g.view(0).me.score).toEqual({ correct: 1, total: 1 });
     expect(g.view(2).me.score).toEqual({ correct: 2, total: 2 });
     expect(g.view(2).result?.identities).toHaveLength(2);
+    const revealedHistory = g.rooms.history(
+      g.roomId,
+      g.ids[2],
+      g.view().sessionId,
+      "topic",
+      g.view().currentRound!.topicId,
+    );
+    for (const answer of revealedHistory.entries[0].answers) {
+      const person = g
+        .view()
+        .respondents.find((m) => m.memberId === answer.memberId)!;
+      expect(answer.avatarUrl).toBe(person.avatarUrl);
+    }
     const old = g.view().sessionId;
     expect(g.cmd(0, "session.restart").ack.status).toBe("applied");
     expect(g.view().sessionId).not.toBe(old);

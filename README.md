@@ -49,7 +49,7 @@ curl --fail http://127.0.0.1:3000/health/ready
 
 Composeは`127.0.0.1:3000`へ公開します。既存nginxからこのポートへHTTPSを中継し、`/ws`のWebSocket Upgradeと、20秒のheartbeatより長いtimeoutを有効にしてください。nginxを同じDockerネットワーク内で動かす場合は、その内部アドレスへ接続先を合わせます。
 
-Discord Developer PortalでActivitiesを設定し、ルートのURL MappingをそのHTTPSホストへ向けます。`/api`、`/ws`、`/assets`を同じoriginで通します。Cookieや外部CDNへの依存はありません。実際のApplication・HTTPS公開先を使った動作確認は、このリポジトリのローカル検証とは別に必要です。
+Discord Developer PortalでActivitiesを設定し、ルートのURL MappingをそのHTTPSホストへ向けます。`/api`、`/ws`、`/assets`を同じoriginで通します。Cookieには依存せず、フォントとUI素材は自前配信します。プロフィール画像はDiscord CDNから取得します。実際のApplication・HTTPS公開先を使った動作確認は、このリポジトリのローカル検証とは別に必要です。
 
 appは1プロセスで運用します。SQLiteの`pittan-data`と暗号化バックアップの`pittan-backups`はnamed volumeです。`docker compose down -v`はデータを消すため、通常の更新には使いません。
 

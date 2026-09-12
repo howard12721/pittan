@@ -1,6 +1,7 @@
 import { feedback } from "./components/feedback";
 import {
   ANONYMOUS_IDS,
+  type AnswerView,
   type HistoryView,
   type RoomView,
 } from "../shared/protocol";
@@ -136,7 +137,7 @@ export function fixture(name: string) {
     topics = topics
       .filter((_, i) => i !== 3)
       .map((t, i) => ({ ...t, displayNumber: i + 1 }));
-  const published = ANONYMOUS_IDS.map((anonymousId, i) => ({
+  const published: AnswerView[] = ANONYMOUS_IDS.map((anonymousId, i) => ({
     anonymousId,
     text: answers[i],
     ...(revealed
@@ -230,11 +231,36 @@ export function fixture(name: string) {
   };
   if (new URLSearchParams(location.search).has("stress")) {
     const longAnswer = "あ".repeat(69) + "\n" + "w".repeat(70);
-    room.members.forEach((m, i) => { m.displayName = "長い表示名".repeat(6) + String(i).padStart(2, "0"); });
-    room.respondents.forEach((m,i) => { m.displayName = room.members[i].displayName; });
-    room.topics.forEach(t => { t.text = "長いお題".repeat(20); });
-    published.forEach((a,i) => { a.text = longAnswer; if (revealed) a.displayName = room.members[i].displayName; });
+    room.members.forEach((m, i) => {
+      m.displayName = "長い表示名".repeat(6) + String(i).padStart(2, "0");
+    });
+    room.respondents.forEach((m, i) => {
+      m.displayName = room.members[i].displayName;
+    });
+    room.topics.forEach((t) => {
+      t.text = "長いお題".repeat(20);
+    });
+    published.forEach((a, i) => {
+      a.text = longAnswer;
+      if (revealed) a.displayName = room.members[i].displayName;
+    });
     if (room.me.submission) room.me.submission.text = longAnswer;
+  }
+  if (new URLSearchParams(location.search).has("avatars")) {
+    room.members.forEach((m, i) => {
+      m.avatarUrl = `https://cdn.discordapp.com/embed/avatars/${i % 6}.png`;
+    });
+    room.respondents.forEach((m) => {
+      m.avatarUrl = room.members.find(
+        (p) => p.memberId === m.memberId,
+      )?.avatarUrl;
+    });
+    if (revealed)
+      published.forEach((a) => {
+        a.avatarUrl = room.respondents.find(
+          (p) => p.memberId === a.memberId,
+        )?.avatarUrl;
+      });
   }
   const state: ConnectionState = { view: room, status: "connected" };
   const connection: GameConnection = {

@@ -127,10 +127,16 @@ export const AckSchema = z.strictObject({
   errorCode: ErrorCode.optional(),
 });
 export type Ack = z.infer<typeof AckSchema>;
+const AvatarUrl = z
+  .string()
+  .regex(
+    /^https:\/\/cdn\.discordapp\.com\/(?:avatars\/\d{1,20}\/(?:a_)?[a-f0-9]{32}\.png\?size=128|embed\/avatars\/[0-5]\.png)$/,
+  );
 const person = {
   memberId: Id,
   displayName: z.string(),
   avatarInitial: z.string(),
+  avatarUrl: AvatarUrl.optional(),
 };
 export const AnswerViewSchema = z.strictObject({
   anonymousId: AnonymousId,
@@ -138,6 +144,7 @@ export const AnswerViewSchema = z.strictObject({
   memberId: Id.optional(),
   displayName: z.string().optional(),
   avatarInitial: z.string().optional(),
+  avatarUrl: AvatarUrl.optional(),
 });
 export type AnswerView = z.infer<typeof AnswerViewSchema>;
 export const TopicViewSchema = z.strictObject({
