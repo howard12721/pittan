@@ -1,0 +1,47 @@
+# Dependencies and generated builds
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.vite/
+.cache/
+
+# Local configuration and credentials (keep the empty setup template)
+.env
+.env.*
+!.env.example
+.npmrc
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Runtime data and encrypted backups, including SQLite sidecar files
+data/
+backups/
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.pittan
+
+# Local verification output and logs
+output/
+.playwright-cli/
+playwright-report/
+test-results/
+*.log
+
+# Editor, agent, and operating-system files
+/.codex/
+/.agents/
+.idea/
+.vscode/
+.DS_Store
+._*
+*.swp
+*.swo
+*~

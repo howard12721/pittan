@@ -1,0 +1,2853 @@
+{
+  "retrievedAt": "2026-09-12",
+  "fileKey": "tVG0kJxe65OymFPLthTqrk",
+  "source": "Live read-only Figma MCP inspection",
+  "counts": {
+    "mobileScreens390": 20,
+    "sheetScreens390": 8,
+    "narrowScreens360": 4
+  },
+  "designContextReviewed": [
+    "134:2607",
+    "140:1460",
+    "137:692",
+    "143:2077",
+    "143:1823"
+  ],
+  "verification": "Inventory and five design contexts/screenshots inspected. Application and complete visual parity not yet tested.",
+  "screens": {
+    "page": {
+      "id": "127:16",
+      "name": "01b · Mobile Screens",
+      "type": "PAGE"
+    },
+    "children": [
+      {
+        "id": "132:37",
+        "name": "01 · ロビー・回答・待機",
+        "type": "SECTION",
+        "width": 2302,
+        "height": 960,
+        "children": [
+          {
+            "id": "134:2607",
+            "name": "M02 / 回答を書く",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "135:51",
+            "name": "M02b / 次のお題に回答する",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "135:106",
+            "name": "M03 / 公開待ち・回答者",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "135:169",
+            "name": "M03 / 公開待ち・閲覧者",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "136:168",
+            "name": "M01 / ロビー",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          }
+        ]
+      },
+      {
+        "id": "132:38",
+        "name": "02 · 回答公開・正体予想",
+        "type": "SECTION",
+        "width": 2302,
+        "height": 960,
+        "children": [
+          {
+            "id": "137:302",
+            "name": "M04 / 回答公開・ホスト",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "137:559",
+            "name": "M04b / 回答公開・閲覧者",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "140:1460",
+            "name": "M05 / 回答フェーズ・ホスト・予想中",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "140:1566",
+            "name": "M05 / 回答フェーズ・閲覧者・予想中",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "140:1669",
+            "name": "M05 / 回答フェーズ・ホスト・予想完了",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          }
+        ]
+      },
+      {
+        "id": "132:39",
+        "name": "03 · 履歴・振り返り",
+        "type": "SECTION",
+        "width": 2302,
+        "height": 960,
+        "children": [
+          {
+            "id": "137:692",
+            "name": "M06 / 回答履歴・お題ごと",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "137:946",
+            "name": "M06b / 回答履歴・B",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "137:1034",
+            "name": "M09 / 振り返り・お題ごと",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "137:1375",
+            "name": "M09b / 振り返り・回答者ごと",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "137:1468",
+            "name": "M08 / 正解発表",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          }
+        ]
+      },
+      {
+        "id": "132:40",
+        "name": "04 · お題リスト",
+        "type": "SECTION",
+        "width": 2302,
+        "height": 960,
+        "children": [
+          {
+            "id": "140:4041",
+            "name": "M07 / お題リスト・ホスト",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "140:4133",
+            "name": "M07p / お題リスト・参加者",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "140:4223",
+            "name": "M07a / お題リスト・並べ替え後",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "140:4315",
+            "name": "M07b / お題リスト・削除後",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "140:4392",
+            "name": "M07d / お題リスト・ドラッグ中",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          }
+        ]
+      },
+      {
+        "id": "132:41",
+        "name": "05 · シート・確認",
+        "type": "SECTION",
+        "width": 3690,
+        "height": 960,
+        "children": [
+          {
+            "id": "143:1823",
+            "name": "M / お題を投稿",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "143:1841",
+            "name": "M / お題を削除しますか？",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "143:1857",
+            "name": "M / 正解発表に進みますか？",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "143:1871",
+            "name": "M / お題を選ぶ",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "143:1902",
+            "name": "M / 回答者を選ぶ",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "143:1959",
+            "name": "M / お題を選ぶ",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "143:1990",
+            "name": "M / 回答者を選ぶ",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "id": "143:2077",
+            "name": "M / 正体を選ぶ",
+            "type": "FRAME",
+            "width": 390,
+            "height": 844
+          }
+        ]
+      },
+      {
+        "id": "132:42",
+        "name": "06 · 狭い画面の確認",
+        "type": "SECTION",
+        "width": 2302,
+        "height": 960,
+        "children": [
+          {
+            "id": "143:4413",
+            "name": "360 / M02 / 回答を書く",
+            "type": "FRAME",
+            "width": 360,
+            "height": 640
+          },
+          {
+            "id": "143:4437",
+            "name": "360 / M05 / 回答フェーズ・ホスト・予想中",
+            "type": "FRAME",
+            "width": 360,
+            "height": 640
+          },
+          {
+            "id": "143:4485",
+            "name": "360 / M06 / 回答履歴・お題ごと",
+            "type": "FRAME",
+            "width": 360,
+            "height": 640
+          },
+          {
+            "id": "143:4504",
+            "name": "360 / M01 / ロビー",
+            "type": "FRAME",
+            "width": 360,
+            "height": 640
+          }
+        ]
+      },
+      {
+        "id": "147:2313",
+        "name": "Mobile layout notes",
+        "type": "FRAME",
+        "width": 1000,
+        "height": 114,
+        "children": [
+          {
+            "id": "147:2314",
+            "name": "次は、何を聞く？",
+            "type": "TEXT",
+            "width": 776,
+            "height": 40
+          },
+          {
+            "id": "147:2315",
+            "name": "13 / 80文字",
+            "type": "TEXT",
+            "width": 1000,
+            "height": 22
+          },
+          {
+            "id": "147:2316",
+            "name": "13 / 80文字",
+            "type": "TEXT",
+            "width": 1000,
+            "height": 20
+          }
+        ]
+      }
+    ]
+  },
+  "components": {
+    "page": {
+      "id": "127:17",
+      "name": "11 · Mobile Components",
+      "type": "PAGE"
+    },
+    "children": [
+      {
+        "id": "128:2",
+        "name": "Mobile / Brand Header",
+        "type": "COMPONENT",
+        "width": 390,
+        "height": 48,
+        "children": [
+          {
+            "id": "128:8",
+            "name": "Brand",
+            "type": "FRAME",
+            "width": 390,
+            "height": 48
+          }
+        ]
+      },
+      {
+        "id": "128:25",
+        "name": "Mobile / Question",
+        "type": "COMPONENT",
+        "width": 358,
+        "height": 48,
+        "children": [
+          {
+            "id": "128:19",
+            "name": "Question number / Q1",
+            "type": "INSTANCE",
+            "width": 48,
+            "height": 48
+          },
+          {
+            "id": "128:20",
+            "name": "Question text",
+            "type": "TEXT",
+            "width": 298,
+            "height": 30
+          }
+        ]
+      },
+      {
+        "id": "129:15",
+        "name": "Mobile / Folded Memo",
+        "type": "COMPONENT",
+        "width": 358,
+        "height": 360,
+        "children": [
+          {
+            "id": "129:16",
+            "name": "Blue backing sheet",
+            "type": "RECTANGLE",
+            "width": 350,
+            "height": 352
+          },
+          {
+            "id": "129:20",
+            "name": "Responsive white paper",
+            "type": "RECTANGLE",
+            "width": 350,
+            "height": 352
+          },
+          {
+            "id": "129:21",
+            "name": "Corner cut",
+            "type": "FRAME",
+            "width": 32,
+            "height": 32
+          },
+          {
+            "id": "129:18",
+            "name": "Folded corner",
+            "type": "VECTOR",
+            "width": 32,
+            "height": 32
+          },
+          {
+            "id": "134:23",
+            "name": "Text viewport",
+            "type": "FRAME",
+            "width": 310,
+            "height": 312
+          }
+        ]
+      },
+      {
+        "id": "129:2290",
+        "name": "Mobile / Waiting Memo",
+        "type": "COMPONENT",
+        "width": 358,
+        "height": 360,
+        "children": [
+          {
+            "id": "129:2281",
+            "name": "Mobile / Folded Memo",
+            "type": "INSTANCE",
+            "width": 358,
+            "height": 360
+          },
+          {
+            "id": "129:2288",
+            "name": "Waiting dots",
+            "type": "TEXT",
+            "width": 76,
+            "height": 56
+          },
+          {
+            "id": "129:2289",
+            "name": "Waiting label",
+            "type": "TEXT",
+            "width": 72,
+            "height": 36
+          }
+        ]
+      },
+      {
+        "id": "129:2299",
+        "name": "Mobile / Response Status",
+        "type": "COMPONENT",
+        "width": 358,
+        "height": 44,
+        "children": [
+          {
+            "id": "129:2298",
+            "name": "Response count",
+            "type": "FRAME",
+            "width": 238,
+            "height": 32
+          },
+          {
+            "id": "129:2296",
+            "name": "＋ お題を投稿",
+            "type": "INSTANCE",
+            "width": 108,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "id": "132:22",
+        "name": "Mobile / Topic Row",
+        "type": "COMPONENT",
+        "width": 358,
+        "height": 104,
+        "children": [
+          {
+            "id": "132:23",
+            "name": "Drag handle",
+            "type": "FRAME",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "id": "132:31",
+            "name": "03",
+            "type": "TEXT",
+            "width": 24,
+            "height": 28
+          },
+          {
+            "id": "132:32",
+            "name": "Topic details",
+            "type": "FRAME",
+            "width": 198,
+            "height": 48
+          },
+          {
+            "id": "132:34",
+            "name": "Host controls",
+            "type": "FRAME",
+            "width": 44,
+            "height": 44
+          }
+        ]
+      },
+      {
+        "id": "138:32",
+        "name": "Mobile / Identity Tab",
+        "type": "COMPONENT_SET",
+        "width": 208,
+        "height": 112,
+        "children": [
+          {
+            "id": "138:24",
+            "name": "Selected=False",
+            "type": "COMPONENT",
+            "width": 64,
+            "height": 48
+          },
+          {
+            "id": "138:28",
+            "name": "Selected=True",
+            "type": "COMPONENT",
+            "width": 64,
+            "height": 48
+          }
+        ]
+      },
+      {
+        "id": "138:69",
+        "name": "Mobile / Prediction Completion",
+        "type": "COMPONENT_SET",
+        "width": 844,
+        "height": 280,
+        "children": [
+          {
+            "id": "138:33",
+            "name": "Role=Host, State=Editing",
+            "type": "COMPONENT",
+            "width": 358,
+            "height": 90
+          },
+          {
+            "id": "138:42",
+            "name": "Role=Host, State=Complete",
+            "type": "COMPONENT",
+            "width": 358,
+            "height": 90
+          },
+          {
+            "id": "138:51",
+            "name": "Role=Viewer, State=Editing",
+            "type": "COMPONENT",
+            "width": 358,
+            "height": 90
+          },
+          {
+            "id": "138:60",
+            "name": "Role=Viewer, State=Complete",
+            "type": "COMPONENT",
+            "width": 358,
+            "height": 90
+          }
+        ]
+      },
+      {
+        "id": "139:1359",
+        "name": "Mobile / Bottom Navigation",
+        "type": "COMPONENT",
+        "width": 390,
+        "height": 84,
+        "children": [
+          {
+            "id": "139:1356",
+            "name": "Tab / プレイ",
+            "type": "INSTANCE",
+            "width": 130,
+            "height": 64
+          },
+          {
+            "id": "139:1357",
+            "name": "Tab / 回答履歴",
+            "type": "INSTANCE",
+            "width": 130,
+            "height": 64
+          },
+          {
+            "id": "139:1358",
+            "name": "Tab / お題リスト",
+            "type": "INSTANCE",
+            "width": 130,
+            "height": 64
+          }
+        ]
+      },
+      {
+        "id": "150:48",
+        "name": "Mobile / Navigation Icon / Play",
+        "type": "COMPONENT",
+        "width": 24,
+        "height": 24,
+        "children": [
+          {
+            "id": "150:47",
+            "name": "Glyph",
+            "type": "VECTOR",
+            "width": 19.4773006439209,
+            "height": 12.837972640991211
+          }
+        ]
+      },
+      {
+        "id": "150:51",
+        "name": "Mobile / Navigation Icon / History",
+        "type": "COMPONENT",
+        "width": 24,
+        "height": 24,
+        "children": [
+          {
+            "id": "150:50",
+            "name": "Glyph",
+            "type": "VECTOR",
+            "width": 18.133956909179688,
+            "height": 18.000036239624023
+          }
+        ]
+      },
+      {
+        "id": "150:54",
+        "name": "Mobile / Navigation Icon / Topics",
+        "type": "COMPONENT",
+        "width": 24,
+        "height": 24,
+        "children": [
+          {
+            "id": "150:53",
+            "name": "Glyph",
+            "type": "VECTOR",
+            "width": 18,
+            "height": 19
+          }
+        ]
+      },
+      {
+        "id": "150:65",
+        "name": "Mobile / Navigation Item",
+        "type": "COMPONENT_SET",
+        "width": 308,
+        "height": 96,
+        "children": [
+          {
+            "id": "150:60",
+            "name": "Selected=False",
+            "type": "COMPONENT",
+            "width": 130,
+            "height": 64
+          },
+          {
+            "id": "150:61",
+            "name": "Selected=True",
+            "type": "COMPONENT",
+            "width": 130,
+            "height": 64
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "pittan / Mobile",
+      "390 × 844 を基準に、360 × 640 でも確認。画面下部は固定ナビ、操作ボタンはその上。長い一覧・回答履歴は内容領域のみスクロール。",
+      "スマホ向けの画面設計・主要導線のプレビュー。選択例は Q3 / B。実装時は Discord のセーフエリアとキーボード表示に合わせて利用可能な高さを調整。"
+    ]
+  },
+  "measurements": [
+    {
+      "id": "134:2607",
+      "name": "M02 / 回答を書く",
+      "w": 390,
+      "h": 844,
+      "layout": "VERTICAL",
+      "gap": 0,
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minH": null,
+      "sizing": [
+        "FIXED",
+        "FIXED"
+      ],
+      "radius": 0,
+      "children": [
+        {
+          "id": "134:2608",
+          "name": "Mobile / Brand Header",
+          "w": 390,
+          "h": 48,
+          "layout": "VERTICAL",
+          "gap": 0,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "minH": null,
+          "sizing": [
+            "FILL",
+            "FIXED"
+          ],
+          "radius": 0,
+          "children": [
+            {
+              "id": "I134:2608;128:8",
+              "name": "Brand",
+              "w": 390,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 0,
+              "padding": [
+                0,
+                16,
+                0,
+                16
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            }
+          ]
+        },
+        {
+          "id": "134:2624",
+          "name": "Content",
+          "w": 390,
+          "h": 712,
+          "layout": "VERTICAL",
+          "gap": 16,
+          "padding": [
+            16,
+            16,
+            16,
+            16
+          ],
+          "minH": null,
+          "sizing": [
+            "FILL",
+            "FILL"
+          ],
+          "radius": 0,
+          "children": [
+            {
+              "id": "134:2625",
+              "name": "Question",
+              "w": 358,
+              "h": 64,
+              "layout": "HORIZONTAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "134:2632",
+              "name": "Response status",
+              "w": 358,
+              "h": 44,
+              "layout": "HORIZONTAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 24
+            },
+            {
+              "id": "134:2638",
+              "name": "Answer input",
+              "w": 358,
+              "h": 440,
+              "layout": "VERTICAL",
+              "gap": 0,
+              "padding": [
+                24,
+                24,
+                24,
+                24
+              ],
+              "minH": 180,
+              "sizing": [
+                "FILL",
+                "FILL"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "134:2646",
+              "name": "Character count",
+              "w": 358,
+              "h": 20
+            },
+            {
+              "id": "134:2647",
+              "name": "Actions",
+              "w": 358,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            }
+          ]
+        },
+        {
+          "id": "140:1187",
+          "name": "Bottom Navigation",
+          "w": 390,
+          "h": 84,
+          "layout": "HORIZONTAL",
+          "gap": 0,
+          "padding": [
+            0,
+            0,
+            20,
+            0
+          ],
+          "minH": null,
+          "sizing": [
+            "FILL",
+            "FIXED"
+          ],
+          "radius": 0,
+          "children": [
+            {
+              "id": "I140:1187;139:1356",
+              "name": "Tab / プレイ",
+              "w": 130,
+              "h": 64,
+              "layout": "VERTICAL",
+              "gap": 4,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "I140:1187;139:1357",
+              "name": "Tab / 回答履歴",
+              "w": 130,
+              "h": 64,
+              "layout": "VERTICAL",
+              "gap": 4,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "I140:1187;139:1358",
+              "name": "Tab / お題リスト",
+              "w": 130,
+              "h": 64,
+              "layout": "VERTICAL",
+              "gap": 4,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            }
+          ]
+        }
+      ],
+      "labels": [
+        "pittan",
+        "Q1",
+        "1週間だけ別の仕事をするなら？",
+        "回答状況",
+        "7 / 10",
+        "＋ お題",
+        "深夜のラジオDJ。好きな曲だけ流したい。",
+        "20 / 140文字",
+        "回答を送信する",
+        "プレイ",
+        "回答履歴",
+        "お題"
+      ]
+    },
+    {
+      "id": "140:1460",
+      "name": "M05 / 回答フェーズ・ホスト・予想中",
+      "w": 390,
+      "h": 844,
+      "layout": "VERTICAL",
+      "gap": 0,
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minH": null,
+      "sizing": [
+        "FIXED",
+        "FIXED"
+      ],
+      "radius": 0,
+      "children": [
+        {
+          "id": "140:1461",
+          "name": "Brand Header",
+          "w": 390,
+          "h": 48,
+          "layout": "VERTICAL",
+          "gap": 0,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "minH": null,
+          "sizing": [
+            "FILL",
+            "FIXED"
+          ],
+          "radius": 0,
+          "children": [
+            {
+              "id": "I140:1461;128:8",
+              "name": "Brand",
+              "w": 390,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 0,
+              "padding": [
+                0,
+                16,
+                0,
+                16
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            }
+          ]
+        },
+        {
+          "id": "140:1464",
+          "name": "Content",
+          "w": 390,
+          "h": 712,
+          "layout": "VERTICAL",
+          "gap": 16,
+          "padding": [
+            16,
+            16,
+            16,
+            16
+          ],
+          "minH": null,
+          "sizing": [
+            "FILL",
+            "FILL"
+          ],
+          "radius": 0,
+          "children": [
+            {
+              "id": "140:1478",
+              "name": "Title",
+              "w": 776,
+              "h": 36
+            },
+            {
+              "id": "140:1479",
+              "name": "Anonymous identity tabs",
+              "w": 358,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 8,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "140:1532",
+              "name": "正体を選ぶ",
+              "w": 358,
+              "h": 56,
+              "layout": "HORIZONTAL",
+              "gap": 12,
+              "padding": [
+                12,
+                12,
+                12,
+                12
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 12
+            },
+            {
+              "id": "140:1539",
+              "name": "B の回答履歴",
+              "w": 358,
+              "h": 386,
+              "layout": "VERTICAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FILL"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "140:1555",
+              "name": "Prediction completion",
+              "w": 358,
+              "h": 90,
+              "layout": "VERTICAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "HUG"
+              ],
+              "radius": 0
+            }
+          ]
+        },
+        {
+          "id": "140:1465",
+          "name": "Bottom Navigation",
+          "w": 390,
+          "h": 84,
+          "layout": "HORIZONTAL",
+          "gap": 0,
+          "padding": [
+            0,
+            0,
+            20,
+            0
+          ],
+          "minH": null,
+          "sizing": [
+            "FILL",
+            "FIXED"
+          ],
+          "radius": 0,
+          "children": [
+            {
+              "id": "I140:1465;139:1356",
+              "name": "Tab / プレイ",
+              "w": 130,
+              "h": 64,
+              "layout": "VERTICAL",
+              "gap": 4,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "I140:1465;139:1357",
+              "name": "Tab / 回答履歴",
+              "w": 130,
+              "h": 64,
+              "layout": "VERTICAL",
+              "gap": 4,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "I140:1465;139:1358",
+              "name": "Tab / お題リスト",
+              "w": 130,
+              "h": 64,
+              "layout": "VERTICAL",
+              "gap": 4,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            }
+          ]
+        }
+      ],
+      "labels": [
+        "pittan",
+        "正体を選択",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "B",
+        "ren  ⌄",
+        "Q3",
+        "1週間だけ別の仕事をするなら？",
+        "水族館の飼育員。ペンギンの相関図を作る。",
+        "Q2",
+        "最近、密かにハマっていることは？",
+        "朝に散歩して、鳥の名前を調べること。",
+        "Q1",
+        "自由に使える100万円があったら？",
+        "古い喫茶店を借りて、週末だけお店を開きたい。",
+        "予想完了",
+        "6 / 12人",
+        "予想を完了する",
+        "正解発表へ",
+        "プレイ",
+        "回答履歴",
+        "お題"
+      ]
+    },
+    {
+      "id": "140:4041",
+      "name": "M07 / お題リスト・ホスト",
+      "w": 390,
+      "h": 844,
+      "layout": "VERTICAL",
+      "gap": 0,
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minH": null,
+      "sizing": [
+        "FIXED",
+        "FIXED"
+      ],
+      "radius": 0,
+      "children": [
+        {
+          "id": "140:4042",
+          "name": "Brand Header",
+          "w": 390,
+          "h": 48,
+          "layout": "VERTICAL",
+          "gap": 0,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "minH": null,
+          "sizing": [
+            "FILL",
+            "FIXED"
+          ],
+          "radius": 0,
+          "children": [
+            {
+              "id": "I140:4042;128:8",
+              "name": "Brand",
+              "w": 390,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 0,
+              "padding": [
+                0,
+                16,
+                0,
+                16
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            }
+          ]
+        },
+        {
+          "id": "140:4045",
+          "name": "Content",
+          "w": 390,
+          "h": 712,
+          "layout": "VERTICAL",
+          "gap": 16,
+          "padding": [
+            16,
+            16,
+            16,
+            16
+          ],
+          "minH": null,
+          "sizing": [
+            "FILL",
+            "FILL"
+          ],
+          "radius": 0,
+          "children": [
+            {
+              "id": "140:4065",
+              "name": "Heading",
+              "w": 358,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "140:4069",
+              "name": "Topic queue",
+              "w": 358,
+              "h": 552,
+              "layout": "VERTICAL",
+              "gap": 16,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FILL"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "140:4131",
+              "name": "次のお題をはじめる",
+              "w": 358,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 8,
+              "padding": [
+                12,
+                24,
+                12,
+                24
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 8
+            }
+          ]
+        },
+        {
+          "id": "140:4046",
+          "name": "Bottom Navigation",
+          "w": 390,
+          "h": 84,
+          "layout": "HORIZONTAL",
+          "gap": 0,
+          "padding": [
+            0,
+            0,
+            20,
+            0
+          ],
+          "minH": null,
+          "sizing": [
+            "FILL",
+            "FIXED"
+          ],
+          "radius": 0,
+          "children": [
+            {
+              "id": "I140:4046;139:1356",
+              "name": "Tab / プレイ",
+              "w": 130,
+              "h": 64,
+              "layout": "VERTICAL",
+              "gap": 4,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "I140:4046;139:1357",
+              "name": "Tab / 回答履歴",
+              "w": 130,
+              "h": 64,
+              "layout": "VERTICAL",
+              "gap": 4,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "I140:4046;139:1358",
+              "name": "Tab / お題リスト",
+              "w": 130,
+              "h": 64,
+              "layout": "VERTICAL",
+              "gap": 4,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            }
+          ]
+        }
+      ],
+      "labels": [
+        "pittan",
+        "お題リスト",
+        "＋ 投稿",
+        "03",
+        "1週間だけ別の仕事をするなら？",
+        "待っているお題  3件",
+        "04",
+        "最近あった、小さな幸せは？",
+        "削除",
+        "05",
+        "無人島にひとつだけ持っていくなら？",
+        "削除",
+        "06",
+        "自分だけの、ちょっとしたこだわりは？",
+        "削除",
+        "次のお題をはじめる",
+        "プレイ",
+        "回答履歴",
+        "お題"
+      ]
+    },
+    {
+      "id": "143:1823",
+      "name": "M / お題を投稿",
+      "w": 390,
+      "h": 844,
+      "layout": "NONE",
+      "gap": 0,
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minH": null,
+      "sizing": [
+        "FIXED",
+        "FIXED"
+      ],
+      "radius": 0,
+      "children": [
+        {
+          "id": "143:1824",
+          "name": "Dismiss sheet",
+          "w": 390,
+          "h": 844,
+          "children": []
+        },
+        {
+          "id": "143:1826",
+          "name": "Bottom sheet",
+          "w": 390,
+          "h": 456,
+          "layout": "VERTICAL",
+          "gap": 20,
+          "padding": [
+            16,
+            16,
+            24,
+            16
+          ],
+          "minH": null,
+          "sizing": [
+            "FIXED",
+            "FIXED"
+          ],
+          "children": [
+            {
+              "id": "143:1827",
+              "name": "Sheet heading",
+              "w": 358,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "143:1832",
+              "name": "Question field",
+              "w": 358,
+              "h": 280,
+              "layout": "VERTICAL",
+              "gap": 8,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FILL"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "143:1836",
+              "name": "Actions",
+              "w": 358,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            }
+          ]
+        }
+      ],
+      "labels": [
+        "お題を投稿",
+        "×",
+        "最近あった、小さな幸せは？",
+        "13 / 80文字",
+        "キャンセル",
+        "投稿する"
+      ]
+    },
+    {
+      "id": "143:1871",
+      "name": "M / お題を選ぶ",
+      "w": 390,
+      "h": 844,
+      "layout": "NONE",
+      "gap": 0,
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minH": null,
+      "sizing": [
+        "FIXED",
+        "FIXED"
+      ],
+      "radius": 0,
+      "children": [
+        {
+          "id": "143:1872",
+          "name": "Dismiss sheet",
+          "w": 390,
+          "h": 844,
+          "children": []
+        },
+        {
+          "id": "143:1874",
+          "name": "Bottom sheet",
+          "w": 390,
+          "h": 444,
+          "layout": "VERTICAL",
+          "gap": 20,
+          "padding": [
+            16,
+            16,
+            24,
+            16
+          ],
+          "minH": null,
+          "sizing": [
+            "FIXED",
+            "FIXED"
+          ],
+          "children": [
+            {
+              "id": "143:1875",
+              "name": "Sheet heading",
+              "w": 358,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "143:1880",
+              "name": "Options",
+              "w": 358,
+              "h": 336,
+              "layout": "VERTICAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FILL"
+              ],
+              "radius": 0
+            }
+          ]
+        }
+      ],
+      "labels": [
+        "お題を選ぶ",
+        "×",
+        "Q3",
+        "1週間だけ別の仕事をするなら？",
+        "Q2",
+        "最近、密かにハマっていることは？",
+        "Q1",
+        "自由に使える100万円があったら？"
+      ]
+    },
+    {
+      "id": "143:1959",
+      "name": "M / お題を選ぶ",
+      "w": 390,
+      "h": 844,
+      "layout": "NONE",
+      "gap": 0,
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minH": null,
+      "sizing": [
+        "FIXED",
+        "FIXED"
+      ],
+      "radius": 0,
+      "children": [
+        {
+          "id": "143:1960",
+          "name": "Dismiss sheet",
+          "w": 390,
+          "h": 844,
+          "children": []
+        },
+        {
+          "id": "143:1962",
+          "name": "Bottom sheet",
+          "w": 390,
+          "h": 444,
+          "layout": "VERTICAL",
+          "gap": 20,
+          "padding": [
+            16,
+            16,
+            24,
+            16
+          ],
+          "minH": null,
+          "sizing": [
+            "FIXED",
+            "FIXED"
+          ],
+          "children": [
+            {
+              "id": "143:1963",
+              "name": "Sheet heading",
+              "w": 358,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "143:1968",
+              "name": "Options",
+              "w": 358,
+              "h": 336,
+              "layout": "VERTICAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FILL"
+              ],
+              "radius": 0
+            }
+          ]
+        }
+      ],
+      "labels": [
+        "お題を選ぶ",
+        "×",
+        "Q3",
+        "1週間だけ別の仕事をするなら？",
+        "Q2",
+        "最近、密かにハマっていることは？",
+        "Q1",
+        "自由に使える100万円があったら？"
+      ]
+    },
+    {
+      "id": "143:1902",
+      "name": "M / 回答者を選ぶ",
+      "w": 390,
+      "h": 844,
+      "layout": "NONE",
+      "gap": 0,
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minH": null,
+      "sizing": [
+        "FIXED",
+        "FIXED"
+      ],
+      "radius": 0,
+      "children": [
+        {
+          "id": "143:1903",
+          "name": "Dismiss sheet",
+          "w": 390,
+          "h": 844,
+          "children": []
+        },
+        {
+          "id": "143:1905",
+          "name": "Bottom sheet",
+          "w": 390,
+          "h": 444,
+          "layout": "VERTICAL",
+          "gap": 20,
+          "padding": [
+            16,
+            16,
+            24,
+            16
+          ],
+          "minH": null,
+          "sizing": [
+            "FIXED",
+            "FIXED"
+          ],
+          "children": [
+            {
+              "id": "143:1906",
+              "name": "Sheet heading",
+              "w": 358,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "143:1911",
+              "name": "Options",
+              "w": 358,
+              "h": 336,
+              "layout": "VERTICAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FILL"
+              ],
+              "radius": 0
+            }
+          ]
+        }
+      ],
+      "labels": [
+        "回答者を選ぶ",
+        "×",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ]
+    },
+    {
+      "id": "143:1990",
+      "name": "M / 回答者を選ぶ",
+      "w": 390,
+      "h": 844,
+      "layout": "NONE",
+      "gap": 0,
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minH": null,
+      "sizing": [
+        "FIXED",
+        "FIXED"
+      ],
+      "radius": 0,
+      "children": [
+        {
+          "id": "143:1991",
+          "name": "Dismiss sheet",
+          "w": 390,
+          "h": 844,
+          "children": []
+        },
+        {
+          "id": "143:1993",
+          "name": "Bottom sheet",
+          "w": 390,
+          "h": 444,
+          "layout": "VERTICAL",
+          "gap": 20,
+          "padding": [
+            16,
+            16,
+            24,
+            16
+          ],
+          "minH": null,
+          "sizing": [
+            "FIXED",
+            "FIXED"
+          ],
+          "children": [
+            {
+              "id": "143:1994",
+              "name": "Sheet heading",
+              "w": 358,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "143:1999",
+              "name": "Options",
+              "w": 358,
+              "h": 336,
+              "layout": "VERTICAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FILL"
+              ],
+              "radius": 0
+            }
+          ]
+        }
+      ],
+      "labels": [
+        "回答者を選ぶ",
+        "×",
+        "y",
+        "yui",
+        "A",
+        "r",
+        "ren",
+        "B",
+        "m",
+        "mika",
+        "C",
+        "s",
+        "sora",
+        "D",
+        "n",
+        "nagi",
+        "E",
+        "r",
+        "riku",
+        "F",
+        "m",
+        "mei",
+        "G",
+        "k",
+        "kei",
+        "H",
+        "n",
+        "nao",
+        "I",
+        "k",
+        "kai",
+        "J"
+      ]
+    },
+    {
+      "id": "143:2077",
+      "name": "M / 正体を選ぶ",
+      "w": 390,
+      "h": 844,
+      "layout": "NONE",
+      "gap": 0,
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minH": null,
+      "sizing": [
+        "FIXED",
+        "FIXED"
+      ],
+      "radius": 0,
+      "children": [
+        {
+          "id": "143:2078",
+          "name": "Dismiss sheet",
+          "w": 390,
+          "h": 844,
+          "children": []
+        },
+        {
+          "id": "143:2080",
+          "name": "Bottom sheet",
+          "w": 390,
+          "h": 724,
+          "layout": "VERTICAL",
+          "gap": 20,
+          "padding": [
+            16,
+            16,
+            24,
+            16
+          ],
+          "minH": null,
+          "sizing": [
+            "FIXED",
+            "FIXED"
+          ],
+          "children": [
+            {
+              "id": "143:2081",
+              "name": "Sheet heading",
+              "w": 358,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "143:2086",
+              "name": "Options",
+              "w": 358,
+              "h": 616,
+              "layout": "VERTICAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FILL"
+              ],
+              "radius": 0
+            }
+          ]
+        }
+      ],
+      "labels": [
+        "正体を選ぶ",
+        "×",
+        "y",
+        "yui",
+        "r",
+        "ren",
+        "m",
+        "mika",
+        "s",
+        "sora",
+        "n",
+        "nagi",
+        "r",
+        "riku",
+        "m",
+        "mei",
+        "k",
+        "kei",
+        "n",
+        "nao",
+        "k",
+        "kai"
+      ]
+    },
+    {
+      "id": "143:4413",
+      "name": "360 / M02 / 回答を書く",
+      "w": 360,
+      "h": 640,
+      "layout": "VERTICAL",
+      "gap": 0,
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minH": null,
+      "sizing": [
+        "FIXED",
+        "FIXED"
+      ],
+      "radius": 0,
+      "children": [
+        {
+          "id": "143:4414",
+          "name": "Mobile / Brand Header",
+          "w": 360,
+          "h": 48,
+          "layout": "VERTICAL",
+          "gap": 0,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "minH": null,
+          "sizing": [
+            "FILL",
+            "FIXED"
+          ],
+          "radius": 0,
+          "children": [
+            {
+              "id": "I143:4414;128:8",
+              "name": "Brand",
+              "w": 360,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 0,
+              "padding": [
+                0,
+                16,
+                0,
+                16
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            }
+          ]
+        },
+        {
+          "id": "143:4415",
+          "name": "Content",
+          "w": 360,
+          "h": 508,
+          "layout": "VERTICAL",
+          "gap": 16,
+          "padding": [
+            16,
+            16,
+            16,
+            16
+          ],
+          "minH": null,
+          "sizing": [
+            "FILL",
+            "FILL"
+          ],
+          "radius": 0,
+          "children": [
+            {
+              "id": "143:4416",
+              "name": "Question",
+              "w": 328,
+              "h": 64,
+              "layout": "HORIZONTAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "143:4417",
+              "name": "Response status",
+              "w": 328,
+              "h": 44,
+              "layout": "HORIZONTAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 24
+            },
+            {
+              "id": "143:4418",
+              "name": "Answer input",
+              "w": 328,
+              "h": 236,
+              "layout": "VERTICAL",
+              "gap": 0,
+              "padding": [
+                24,
+                24,
+                24,
+                24
+              ],
+              "minH": 180,
+              "sizing": [
+                "FILL",
+                "FILL"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "143:4419",
+              "name": "Character count",
+              "w": 328,
+              "h": 20
+            },
+            {
+              "id": "143:4420",
+              "name": "Actions",
+              "w": 328,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            }
+          ]
+        },
+        {
+          "id": "143:4422",
+          "name": "Bottom Navigation",
+          "w": 360,
+          "h": 84,
+          "layout": "HORIZONTAL",
+          "gap": 0,
+          "padding": [
+            0,
+            0,
+            20,
+            0
+          ],
+          "minH": null,
+          "sizing": [
+            "FILL",
+            "FIXED"
+          ],
+          "radius": 0,
+          "children": [
+            {
+              "id": "I143:4422;139:1356",
+              "name": "Tab / プレイ",
+              "w": 120,
+              "h": 64,
+              "layout": "VERTICAL",
+              "gap": 4,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "I143:4422;139:1357",
+              "name": "Tab / 回答履歴",
+              "w": 120,
+              "h": 64,
+              "layout": "VERTICAL",
+              "gap": 4,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "I143:4422;139:1358",
+              "name": "Tab / お題リスト",
+              "w": 120,
+              "h": 64,
+              "layout": "VERTICAL",
+              "gap": 4,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            }
+          ]
+        }
+      ],
+      "labels": [
+        "pittan",
+        "Q1",
+        "1週間だけ別の仕事をするなら？",
+        "回答状況",
+        "7 / 10",
+        "＋ お題",
+        "深夜のラジオDJ。好きな曲だけ流したい。",
+        "20 / 140文字",
+        "回答を送信する",
+        "プレイ",
+        "回答履歴",
+        "お題"
+      ]
+    },
+    {
+      "id": "143:4437",
+      "name": "360 / M05 / 回答フェーズ・ホスト・予想中",
+      "w": 360,
+      "h": 640,
+      "layout": "VERTICAL",
+      "gap": 0,
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minH": null,
+      "sizing": [
+        "FIXED",
+        "FIXED"
+      ],
+      "radius": 0,
+      "children": [
+        {
+          "id": "143:4438",
+          "name": "Brand Header",
+          "w": 360,
+          "h": 48,
+          "layout": "VERTICAL",
+          "gap": 0,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "minH": null,
+          "sizing": [
+            "FILL",
+            "FIXED"
+          ],
+          "radius": 0,
+          "children": [
+            {
+              "id": "I143:4438;128:8",
+              "name": "Brand",
+              "w": 360,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 0,
+              "padding": [
+                0,
+                16,
+                0,
+                16
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            }
+          ]
+        },
+        {
+          "id": "143:4439",
+          "name": "Content",
+          "w": 360,
+          "h": 508,
+          "layout": "VERTICAL",
+          "gap": 16,
+          "padding": [
+            16,
+            16,
+            16,
+            16
+          ],
+          "minH": null,
+          "sizing": [
+            "FILL",
+            "FILL"
+          ],
+          "radius": 0,
+          "children": [
+            {
+              "id": "143:4440",
+              "name": "Title",
+              "w": 776,
+              "h": 36
+            },
+            {
+              "id": "143:4441",
+              "name": "Anonymous identity tabs",
+              "w": 328,
+              "h": 48,
+              "layout": "HORIZONTAL",
+              "gap": 8,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "143:4452",
+              "name": "正体を選ぶ",
+              "w": 328,
+              "h": 56,
+              "layout": "HORIZONTAL",
+              "gap": 12,
+              "padding": [
+                12,
+                12,
+                12,
+                12
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 12
+            },
+            {
+              "id": "143:4453",
+              "name": "B の回答履歴",
+              "w": 328,
+              "h": 182,
+              "layout": "VERTICAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FILL"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "143:4469",
+              "name": "Prediction completion",
+              "w": 328,
+              "h": 90,
+              "layout": "VERTICAL",
+              "gap": 12,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "HUG"
+              ],
+              "radius": 0
+            }
+          ]
+        },
+        {
+          "id": "143:4470",
+          "name": "Bottom Navigation",
+          "w": 360,
+          "h": 84,
+          "layout": "HORIZONTAL",
+          "gap": 0,
+          "padding": [
+            0,
+            0,
+            20,
+            0
+          ],
+          "minH": null,
+          "sizing": [
+            "FILL",
+            "FIXED"
+          ],
+          "radius": 0,
+          "children": [
+            {
+              "id": "I143:4470;139:1356",
+              "name": "Tab / プレイ",
+              "w": 120,
+              "h": 64,
+              "layout": "VERTICAL",
+              "gap": 4,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "I143:4470;139:1357",
+              "name": "Tab / 回答履歴",
+              "w": 120,
+              "h": 64,
+              "layout": "VERTICAL",
+              "gap": 4,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            },
+            {
+              "id": "I143:4470;139:1358",
+              "name": "Tab / お題リスト",
+              "w": 120,
+              "h": 64,
+              "layout": "VERTICAL",
+              "gap": 4,
+              "padding": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "minH": null,
+              "sizing": [
+                "FILL",
+                "FIXED"
+              ],
+              "radius": 0
+            }
+          ]
+        }
+      ],
+      "labels": [
+        "pittan",
+        "正体を選択",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "B",
+        "ren  ⌄",
+        "Q3",
+        "1週間だけ別の仕事をするなら？",
+        "水族館の飼育員。ペンギンの相関図を作る。",
+        "Q2",
+        "最近、密かにハマっていることは？",
+        "朝に散歩して、鳥の名前を調べること。",
+        "Q1",
+        "自由に使える100万円があったら？",
+        "古い喫茶店を借りて、週末だけお店を開きたい。",
+        "予想完了",
+        "6 / 12人",
+        "予想を完了する",
+        "正解発表へ",
+        "プレイ",
+        "回答履歴",
+        "お題"
+      ]
+    }
+  ],
+  "extra": {
+    "histories": [
+      {
+        "id": "137:692",
+        "entries": [
+          {
+            "id": "137:716",
+            "w": 358,
+            "h": 680,
+            "mainId": "131:415",
+            "mainName": "Layout=Mobile, Phase=Playing, View=Topic",
+            "properties": {
+              "Layout": {
+                "value": "Mobile",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "Phase": {
+                "value": "Playing",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "View": {
+                "value": "Topic",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "137:946",
+        "entries": [
+          {
+            "id": "137:970",
+            "w": 358,
+            "h": 680,
+            "mainId": "131:2458",
+            "mainName": "Layout=Mobile, Phase=Playing, View=Respondent",
+            "properties": {
+              "Layout": {
+                "value": "Mobile",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "Phase": {
+                "value": "Playing",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "View": {
+                "value": "Respondent",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "137:1034",
+        "entries": [
+          {
+            "id": "137:1058",
+            "w": 358,
+            "h": 616,
+            "mainId": "131:2546",
+            "mainName": "Layout=Mobile, Phase=Review, View=Topic",
+            "properties": {
+              "Layout": {
+                "value": "Mobile",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "Phase": {
+                "value": "Review",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "View": {
+                "value": "Topic",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "137:1375",
+        "entries": [
+          {
+            "id": "137:1399",
+            "w": 358,
+            "h": 616,
+            "mainId": "131:2727",
+            "mainName": "Layout=Mobile, Phase=Review, View=Respondent",
+            "properties": {
+              "Layout": {
+                "value": "Mobile",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "Phase": {
+                "value": "Review",
+                "type": "VARIANT",
+                "boundVariables": {}
+              },
+              "View": {
+                "value": "Respondent",
+                "type": "VARIANT",
+                "boundVariables": {}
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "sheets": [
+      {
+        "id": "143:1841",
+        "sheetId": "143:1844",
+        "w": 390,
+        "h": 284,
+        "topLeftRadius": 24,
+        "topRightRadius": 24,
+        "labels": [
+          "お題を削除しますか？",
+          "×",
+          "最近あった、小さな幸せは？",
+          "キャンセル",
+          "削除する"
+        ]
+      },
+      {
+        "id": "143:1857",
+        "sheetId": "143:1860",
+        "w": 390,
+        "h": 192,
+        "topLeftRadius": 24,
+        "topRightRadius": 24,
+        "labels": [
+          "正解発表に進みますか？",
+          "×",
+          "予想に戻る",
+          "正解を発表する"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "retrievedOn": "2026-09-12",
+  "assets": [
+    {
+      "path": "public/assets/figma/mobile-memo-sheet.svg",
+      "figmaFile": "tVG0kJxe65OymFPLthTqrk",
+      "nodeId": "129:21",
+      "sha256": "bcf7bacc35c7b796ca5d2f554f9fb85c48960309b6b87ce0a7bb05cd9954fa34"
+    },
+    {
+      "path": "public/assets/figma/mobile-memo-fold.svg",
+      "figmaFile": "tVG0kJxe65OymFPLthTqrk",
+      "nodeId": "129:18",
+      "sha256": "5490bf1479b5153d480fc44db2b7da4e8ed9a1532bdedaf42317f4792bbf00fe"
+    },
+    {
+      "path": "public/assets/figma/memo-sheet.svg",
+      "figmaFile": "tVG0kJxe65OymFPLthTqrk",
+      "nodeId": "62:4",
+      "sha256": "e58f3c0e041f33a00691a09f1824eb0456f68eecdcf4102004e66035e0f89a0d"
+    },
+    {
+      "path": "public/assets/figma/memo-fold.svg",
+      "figmaFile": "tVG0kJxe65OymFPLthTqrk",
+      "nodeId": "62:5",
+      "sha256": "22d882905ab6ffe0b0ceb24d73fdab480e6d317de3d094b07b77d32a1e281cd2"
+    },
+    {
+      "path": "public/assets/figma/question-tail.svg",
+      "figmaFile": "tVG0kJxe65OymFPLthTqrk",
+      "nodeId": "47:542",
+      "sha256": "0479d48f7d5fa1397f613416ef726e9feb9cd232f17054cdea1b5fcc949f8dd7"
+    }
+  ],
+  "note": "Exact exported SVG bytes. Verify node provenance against inventories when replacing assets."
+}

@@ -1,0 +1,1104 @@
+{
+  "retrievedAt": "2026-09-12",
+  "fileKey": "tVG0kJxe65OymFPLthTqrk",
+  "list": [
+    {
+      "id": "3:103",
+      "name": "04 / 回答公開・ホスト",
+      "children": [
+        {
+          "id": "3:107",
+          "name": "Header",
+          "type": "INSTANCE",
+          "w": 1280,
+          "h": 80,
+          "layoutMode": "HORIZONTAL",
+          "itemSpacing": 32,
+          "padding": [
+            0,
+            32,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "3:119",
+          "name": "Content",
+          "type": "FRAME",
+          "w": 1280,
+          "h": 720,
+          "layoutMode": "HORIZONTAL",
+          "itemSpacing": 0,
+          "padding": [
+            48,
+            48,
+            48,
+            48
+          ]
+        }
+      ],
+      "components": [
+        {
+          "id": "3:74",
+          "name": "Activity Header",
+          "width": 1280,
+          "height": 80
+        },
+        {
+          "id": "39:17",
+          "name": "Selected=True, State=Default",
+          "width": 128,
+          "height": 80
+        },
+        {
+          "id": "39:5",
+          "name": "Selected=False, State=Default",
+          "width": 128,
+          "height": 80
+        },
+        {
+          "id": "47:539",
+          "name": "Question Marker",
+          "width": 80,
+          "height": 80
+        },
+        {
+          "id": "3:59",
+          "name": "Answer Card",
+          "width": 400,
+          "height": 192
+        },
+        {
+          "id": "111:2030",
+          "name": "Identity Symbol / A / Triangle",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2033",
+          "name": "Identity Symbol / B / Circle",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2036",
+          "name": "Identity Symbol / C / Diamond",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2039",
+          "name": "Identity Symbol / D / Star",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2042",
+          "name": "Identity Symbol / E / Heart",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2045",
+          "name": "Identity Symbol / F / Moon",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2049",
+          "name": "Identity Symbol / G / Flower",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2052",
+          "name": "Identity Symbol / H / Lightning",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2055",
+          "name": "Identity Symbol / I / Cloud",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2059",
+          "name": "Identity Symbol / J / Leaf",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "3:31",
+          "name": "Style=Secondary, State=Default",
+          "width": 180,
+          "height": 48
+        },
+        {
+          "id": "3:29",
+          "name": "Style=Primary, State=Default",
+          "width": 180,
+          "height": 48
+        }
+      ]
+    },
+    {
+      "id": "3:104",
+      "name": "06 / 回答履歴",
+      "children": [
+        {
+          "id": "11:206",
+          "name": "Header",
+          "type": "INSTANCE",
+          "w": 1280,
+          "h": 80,
+          "layoutMode": "HORIZONTAL",
+          "itemSpacing": 32,
+          "padding": [
+            0,
+            32,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "11:218",
+          "name": "History content",
+          "type": "FRAME",
+          "w": 1280,
+          "h": 720,
+          "layoutMode": "HORIZONTAL",
+          "itemSpacing": 32,
+          "padding": [
+            32,
+            32,
+            32,
+            32
+          ]
+        }
+      ],
+      "components": [
+        {
+          "id": "3:74",
+          "name": "Activity Header",
+          "width": 1280,
+          "height": 80
+        },
+        {
+          "id": "39:5",
+          "name": "Selected=False, State=Default",
+          "width": 128,
+          "height": 80
+        },
+        {
+          "id": "39:17",
+          "name": "Selected=True, State=Default",
+          "width": 128,
+          "height": 80
+        },
+        {
+          "id": "81:35",
+          "name": "Phase=Playing, View=Topic",
+          "width": 904,
+          "height": 656
+        },
+        {
+          "id": "95:95",
+          "name": "View=Topic",
+          "width": 176,
+          "height": 48
+        },
+        {
+          "id": "11:2",
+          "name": "Topic Row",
+          "width": 760,
+          "height": 92
+        },
+        {
+          "id": "47:539",
+          "name": "Question Marker",
+          "width": 80,
+          "height": 80
+        },
+        {
+          "id": "3:59",
+          "name": "Answer Card",
+          "width": 400,
+          "height": 192
+        },
+        {
+          "id": "111:2030",
+          "name": "Identity Symbol / A / Triangle",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2033",
+          "name": "Identity Symbol / B / Circle",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2036",
+          "name": "Identity Symbol / C / Diamond",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2039",
+          "name": "Identity Symbol / D / Star",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2042",
+          "name": "Identity Symbol / E / Heart",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2045",
+          "name": "Identity Symbol / F / Moon",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2049",
+          "name": "Identity Symbol / G / Flower",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2052",
+          "name": "Identity Symbol / H / Lightning",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2055",
+          "name": "Identity Symbol / I / Cloud",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2059",
+          "name": "Identity Symbol / J / Leaf",
+          "width": 24,
+          "height": 24
+        }
+      ]
+    },
+    {
+      "id": "73:1185",
+      "name": "回答フェーズ / ホスト",
+      "children": [
+        {
+          "id": "73:1186",
+          "name": "Header",
+          "type": "INSTANCE",
+          "w": 1280,
+          "h": 80,
+          "layoutMode": "HORIZONTAL",
+          "itemSpacing": 32,
+          "padding": [
+            0,
+            32,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "73:1187",
+          "name": "Content",
+          "type": "FRAME",
+          "w": 1280,
+          "h": 720,
+          "layoutMode": "HORIZONTAL",
+          "itemSpacing": 24,
+          "padding": [
+            32,
+            32,
+            32,
+            32
+          ]
+        }
+      ],
+      "components": [
+        {
+          "id": "3:74",
+          "name": "Activity Header",
+          "width": 1280,
+          "height": 80
+        },
+        {
+          "id": "39:17",
+          "name": "Selected=True, State=Default",
+          "width": 128,
+          "height": 80
+        },
+        {
+          "id": "39:5",
+          "name": "Selected=False, State=Default",
+          "width": 128,
+          "height": 80
+        },
+        {
+          "id": "81:35",
+          "name": "Phase=Playing, View=Topic",
+          "width": 904,
+          "height": 656
+        },
+        {
+          "id": "95:95",
+          "name": "View=Topic",
+          "width": 176,
+          "height": 48
+        },
+        {
+          "id": "11:2",
+          "name": "Topic Row",
+          "width": 760,
+          "height": 92
+        },
+        {
+          "id": "47:539",
+          "name": "Question Marker",
+          "width": 80,
+          "height": 80
+        },
+        {
+          "id": "3:59",
+          "name": "Answer Card",
+          "width": 400,
+          "height": 192
+        },
+        {
+          "id": "111:2030",
+          "name": "Identity Symbol / A / Triangle",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2033",
+          "name": "Identity Symbol / B / Circle",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2036",
+          "name": "Identity Symbol / C / Diamond",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2039",
+          "name": "Identity Symbol / D / Star",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2042",
+          "name": "Identity Symbol / E / Heart",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2045",
+          "name": "Identity Symbol / F / Moon",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2049",
+          "name": "Identity Symbol / G / Flower",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2052",
+          "name": "Identity Symbol / H / Lightning",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2055",
+          "name": "Identity Symbol / I / Cloud",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2059",
+          "name": "Identity Symbol / J / Leaf",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "3:86",
+          "name": "Guess Row",
+          "width": 312,
+          "height": 52
+        },
+        {
+          "id": "86:7",
+          "name": "State=Editing",
+          "width": 248,
+          "height": 90
+        },
+        {
+          "id": "3:29",
+          "name": "Style=Primary, State=Default",
+          "width": 180,
+          "height": 48
+        },
+        {
+          "id": "3:31",
+          "name": "Style=Secondary, State=Default",
+          "width": 180,
+          "height": 48
+        }
+      ]
+    },
+    {
+      "id": "3:106",
+      "name": "08 / 正解発表",
+      "children": [
+        {
+          "id": "13:319",
+          "name": "Header",
+          "type": "INSTANCE",
+          "w": 1280,
+          "h": 80,
+          "layoutMode": "HORIZONTAL",
+          "itemSpacing": 32,
+          "padding": [
+            0,
+            32,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "13:331",
+          "name": "Results content",
+          "type": "FRAME",
+          "w": 1280,
+          "h": 720,
+          "layoutMode": "VERTICAL",
+          "itemSpacing": 24,
+          "padding": [
+            32,
+            32,
+            32,
+            32
+          ]
+        }
+      ],
+      "components": [
+        {
+          "id": "3:74",
+          "name": "Activity Header",
+          "width": 1280,
+          "height": 80
+        },
+        {
+          "id": "39:17",
+          "name": "Selected=True, State=Default",
+          "width": 128,
+          "height": 80
+        },
+        {
+          "id": "39:5",
+          "name": "Selected=False, State=Default",
+          "width": 128,
+          "height": 80
+        },
+        {
+          "id": "13:2",
+          "name": "Identity Reveal Row",
+          "width": 400,
+          "height": 88
+        },
+        {
+          "id": "111:2030",
+          "name": "Identity Symbol / A / Triangle",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "103:12",
+          "name": "Player Avatar",
+          "width": 48,
+          "height": 48
+        },
+        {
+          "id": "111:2033",
+          "name": "Identity Symbol / B / Circle",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2036",
+          "name": "Identity Symbol / C / Diamond",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2039",
+          "name": "Identity Symbol / D / Star",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2042",
+          "name": "Identity Symbol / E / Heart",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2045",
+          "name": "Identity Symbol / F / Moon",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2049",
+          "name": "Identity Symbol / G / Flower",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2052",
+          "name": "Identity Symbol / H / Lightning",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2055",
+          "name": "Identity Symbol / I / Cloud",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2059",
+          "name": "Identity Symbol / J / Leaf",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "3:31",
+          "name": "Style=Secondary, State=Default",
+          "width": 180,
+          "height": 48
+        },
+        {
+          "id": "3:29",
+          "name": "Style=Primary, State=Default",
+          "width": 180,
+          "height": 48
+        }
+      ]
+    },
+    {
+      "id": "109:1509",
+      "name": "09 / 振り返り・お題ごと",
+      "children": [
+        {
+          "id": "109:1510",
+          "name": "Header",
+          "type": "INSTANCE",
+          "w": 1280,
+          "h": 80,
+          "layoutMode": "HORIZONTAL",
+          "itemSpacing": 32,
+          "padding": [
+            0,
+            32,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "109:1511",
+          "name": "Review content",
+          "type": "FRAME",
+          "w": 1280,
+          "h": 720,
+          "layoutMode": "VERTICAL",
+          "itemSpacing": 24,
+          "padding": [
+            32,
+            32,
+            32,
+            32
+          ]
+        }
+      ],
+      "components": [
+        {
+          "id": "3:74",
+          "name": "Activity Header",
+          "width": 1280,
+          "height": 80
+        },
+        {
+          "id": "39:5",
+          "name": "Selected=False, State=Default",
+          "width": 128,
+          "height": 80
+        },
+        {
+          "id": "39:17",
+          "name": "Selected=True, State=Default",
+          "width": 128,
+          "height": 80
+        },
+        {
+          "id": "108:1132",
+          "name": "Phase=Review, View=Topic",
+          "width": 904,
+          "height": 656
+        },
+        {
+          "id": "95:95",
+          "name": "View=Topic",
+          "width": 176,
+          "height": 48
+        },
+        {
+          "id": "11:2",
+          "name": "Topic Row",
+          "width": 760,
+          "height": 92
+        },
+        {
+          "id": "47:539",
+          "name": "Question Marker",
+          "width": 80,
+          "height": 80
+        },
+        {
+          "id": "108:1109",
+          "name": "Review Answer Card",
+          "width": 400,
+          "height": 216
+        },
+        {
+          "id": "103:12",
+          "name": "Player Avatar",
+          "width": 48,
+          "height": 48
+        },
+        {
+          "id": "111:2030",
+          "name": "Identity Symbol / A / Triangle",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2033",
+          "name": "Identity Symbol / B / Circle",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2036",
+          "name": "Identity Symbol / C / Diamond",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2039",
+          "name": "Identity Symbol / D / Star",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2042",
+          "name": "Identity Symbol / E / Heart",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2045",
+          "name": "Identity Symbol / F / Moon",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2049",
+          "name": "Identity Symbol / G / Flower",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2052",
+          "name": "Identity Symbol / H / Lightning",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2055",
+          "name": "Identity Symbol / I / Cloud",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2059",
+          "name": "Identity Symbol / J / Leaf",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "3:31",
+          "name": "Style=Secondary, State=Default",
+          "width": 180,
+          "height": 48
+        },
+        {
+          "id": "3:29",
+          "name": "Style=Primary, State=Default",
+          "width": 180,
+          "height": 48
+        }
+      ]
+    },
+    {
+      "id": "109:1786",
+      "name": "09b / 振り返り・回答者ごと",
+      "children": [
+        {
+          "id": "109:1787",
+          "name": "Header",
+          "type": "INSTANCE",
+          "w": 1280,
+          "h": 80,
+          "layoutMode": "HORIZONTAL",
+          "itemSpacing": 32,
+          "padding": [
+            0,
+            32,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "109:1788",
+          "name": "Review content",
+          "type": "FRAME",
+          "w": 1280,
+          "h": 720,
+          "layoutMode": "VERTICAL",
+          "itemSpacing": 24,
+          "padding": [
+            32,
+            32,
+            32,
+            32
+          ]
+        }
+      ],
+      "components": [
+        {
+          "id": "3:74",
+          "name": "Activity Header",
+          "width": 1280,
+          "height": 80
+        },
+        {
+          "id": "39:5",
+          "name": "Selected=False, State=Default",
+          "width": 128,
+          "height": 80
+        },
+        {
+          "id": "39:17",
+          "name": "Selected=True, State=Default",
+          "width": 128,
+          "height": 80
+        },
+        {
+          "id": "108:1160",
+          "name": "Phase=Review, View=Respondent",
+          "width": 904,
+          "height": 656
+        },
+        {
+          "id": "96:88",
+          "name": "View=Respondent",
+          "width": 176,
+          "height": 48
+        },
+        {
+          "id": "108:1121",
+          "name": "Selected=False",
+          "width": 176,
+          "height": 48
+        },
+        {
+          "id": "103:12",
+          "name": "Player Avatar",
+          "width": 48,
+          "height": 48
+        },
+        {
+          "id": "111:2030",
+          "name": "Identity Symbol / A / Triangle",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "108:1126",
+          "name": "Selected=True",
+          "width": 176,
+          "height": 48
+        },
+        {
+          "id": "111:2033",
+          "name": "Identity Symbol / B / Circle",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2036",
+          "name": "Identity Symbol / C / Diamond",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2039",
+          "name": "Identity Symbol / D / Star",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2042",
+          "name": "Identity Symbol / E / Heart",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2045",
+          "name": "Identity Symbol / F / Moon",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2049",
+          "name": "Identity Symbol / G / Flower",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2052",
+          "name": "Identity Symbol / H / Lightning",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2055",
+          "name": "Identity Symbol / I / Cloud",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "111:2059",
+          "name": "Identity Symbol / J / Leaf",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "id": "47:539",
+          "name": "Question Marker",
+          "width": 80,
+          "height": 80
+        },
+        {
+          "id": "3:31",
+          "name": "Style=Secondary, State=Default",
+          "width": 180,
+          "height": 48
+        },
+        {
+          "id": "3:29",
+          "name": "Style=Primary, State=Default",
+          "width": 180,
+          "height": 48
+        }
+      ]
+    },
+    {
+      "id": "3:105",
+      "name": "07 / お題リスト・ホスト",
+      "children": [
+        {
+          "id": "12:286",
+          "name": "Header",
+          "type": "INSTANCE",
+          "w": 1280,
+          "h": 80,
+          "layoutMode": "HORIZONTAL",
+          "itemSpacing": 32,
+          "padding": [
+            0,
+            32,
+            0,
+            32
+          ]
+        },
+        {
+          "id": "12:298",
+          "name": "Topic queue content",
+          "type": "FRAME",
+          "w": 1280,
+          "h": 720,
+          "layoutMode": "HORIZONTAL",
+          "itemSpacing": 32,
+          "padding": [
+            48,
+            48,
+            48,
+            48
+          ]
+        }
+      ],
+      "components": [
+        {
+          "id": "3:74",
+          "name": "Activity Header",
+          "width": 1280,
+          "height": 80
+        },
+        {
+          "id": "39:5",
+          "name": "Selected=False, State=Default",
+          "width": 128,
+          "height": 80
+        },
+        {
+          "id": "39:17",
+          "name": "Selected=True, State=Default",
+          "width": 128,
+          "height": 80
+        },
+        {
+          "id": "3:29",
+          "name": "Style=Primary, State=Default",
+          "width": 180,
+          "height": 48
+        },
+        {
+          "id": "11:2",
+          "name": "Topic Row",
+          "width": 760,
+          "height": 92
+        },
+        {
+          "id": "114:2081",
+          "name": "Topic Row / Host",
+          "width": 960,
+          "height": 80
+        },
+        {
+          "id": "3:33",
+          "name": "Style=Quiet, State=Default",
+          "width": 180,
+          "height": 48
+        }
+      ]
+    }
+  ],
+  "overlays": [
+    {
+      "id": "14:358",
+      "name": "05 / お題を投稿",
+      "w": 560,
+      "h": 452,
+      "texts": [
+        "お題を投稿",
+        "×",
+        "最近あった、小さな幸せは？",
+        "13 / 80文字",
+        "キャンセル",
+        "投稿する"
+      ]
+    },
+    {
+      "id": "115:2177",
+      "name": "07b / お題リスト・削除後",
+      "w": 1280,
+      "h": 800,
+      "texts": [
+        "pittan",
+        "プレイ",
+        "回答履歴",
+        "お題",
+        "お題リスト",
+        "＋ お題を投稿する",
+        "03",
+        "1週間だけ別の仕事をするなら？",
+        "待っているお題  2件",
+        "04",
+        "無人島にひとつだけ持っていくなら？",
+        "削除",
+        "05",
+        "自分だけの、ちょっとしたこだわりは？",
+        "削除",
+        "次のお題をはじめる"
+      ]
+    },
+    {
+      "id": "115:2244",
+      "name": "07c / お題を削除・確認",
+      "w": 560,
+      "h": 296,
+      "texts": [
+        "お題を削除しますか？",
+        "×",
+        "最近あった、小さな幸せは？",
+        "キャンセル",
+        "削除する"
+      ]
+    }
+  ],
+  "resultTexts": [
+    "pittan",
+    "プレイ",
+    "振り返り",
+    "お題",
+    "正解発表",
+    "正解数",
+    "7 / 9",
+    "A",
+    "y",
+    "yui",
+    "B",
+    "r",
+    "ren",
+    "C",
+    "m",
+    "mika",
+    "D",
+    "s",
+    "sora",
+    "E",
+    "n",
+    "nagi",
+    "F",
+    "r",
+    "riku",
+    "G",
+    "m",
+    "mei",
+    "H",
+    "k",
+    "kei",
+    "I",
+    "n",
+    "nao",
+    "J",
+    "k",
+    "kai",
+    "回答を振り返る",
+    "もう一度あそぶ"
+  ]
+}

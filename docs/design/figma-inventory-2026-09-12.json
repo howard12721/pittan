@@ -1,0 +1,1097 @@
+{
+  "retrievedAt": "2026-09-12",
+  "fileKey": "tVG0kJxe65OymFPLthTqrk",
+  "pages": [
+    {
+      "id": "0:1",
+      "name": "00 · Cover"
+    },
+    {
+      "id": "3:2",
+      "name": "01 · Screens"
+    },
+    {
+      "id": "3:3",
+      "name": "02 · Getting Started"
+    },
+    {
+      "id": "3:4",
+      "name": "03 · Foundations"
+    },
+    {
+      "id": "3:5",
+      "name": "04 · Button"
+    },
+    {
+      "id": "3:6",
+      "name": "05 · Identity"
+    },
+    {
+      "id": "3:7",
+      "name": "06 · Answer Card"
+    },
+    {
+      "id": "3:8",
+      "name": "07 · Navigation"
+    },
+    {
+      "id": "3:9",
+      "name": "08 · Utilities"
+    },
+    {
+      "id": "47:538",
+      "name": "09 · Question Marker"
+    },
+    {
+      "id": "81:2",
+      "name": "10 · History Browser"
+    }
+  ],
+  "screens": [
+    {
+      "id": "3:100",
+      "name": "01 / ロビー",
+      "width": 1280,
+      "height": 800,
+      "labels": []
+    },
+    {
+      "id": "3:101",
+      "name": "02 / 回答を書く",
+      "width": 1280,
+      "height": 800,
+      "labels": [
+        "20 / 140文字"
+      ]
+    },
+    {
+      "id": "15:361",
+      "name": "03 / 公開待ち・回答者",
+      "width": 1280,
+      "height": 800,
+      "labels": [
+        "待機中"
+      ]
+    },
+    {
+      "id": "20:506",
+      "name": "02b / 次のお題に回答する",
+      "width": 1280,
+      "height": 800,
+      "labels": [
+        "0 / 140文字"
+      ]
+    },
+    {
+      "id": "3:102",
+      "name": "03 / 公開待ち・閲覧者",
+      "width": 1280,
+      "height": 800,
+      "labels": [
+        "待機中"
+      ]
+    },
+    {
+      "id": "3:103",
+      "name": "04 / 回答公開・ホスト",
+      "width": 1280,
+      "height": 800,
+      "labels": [
+        "回答フェーズに進む"
+      ]
+    },
+    {
+      "id": "19:402",
+      "name": "04b / 回答公開・閲覧者",
+      "width": 1280,
+      "height": 800,
+      "labels": []
+    },
+    {
+      "id": "73:1185",
+      "name": "回答フェーズ / ホスト",
+      "width": 1280,
+      "height": 800,
+      "labels": [
+        "予想完了",
+        "予想を完了する",
+        "正解発表へ"
+      ]
+    },
+    {
+      "id": "3:106",
+      "name": "08 / 正解発表",
+      "width": 1280,
+      "height": 800,
+      "labels": [
+        "正解発表",
+        "正解数"
+      ]
+    },
+    {
+      "id": "75:715",
+      "name": "回答フェーズ / 閲覧者",
+      "width": 1280,
+      "height": 800,
+      "labels": [
+        "予想完了",
+        "予想を完了する",
+        "ホストの正解発表を待っています"
+      ]
+    },
+    {
+      "id": "3:104",
+      "name": "06 / 回答履歴",
+      "width": 1280,
+      "height": 800,
+      "labels": []
+    },
+    {
+      "id": "18:377",
+      "name": "06b / B の回答履歴",
+      "width": 1280,
+      "height": 800,
+      "labels": []
+    },
+    {
+      "id": "3:105",
+      "name": "07 / お題リスト・ホスト",
+      "width": 1280,
+      "height": 800,
+      "labels": [
+        "お題リスト"
+      ]
+    },
+    {
+      "id": "109:1509",
+      "name": "09 / 振り返り・お題ごと",
+      "width": 1280,
+      "height": 800,
+      "labels": [
+        "正解発表に戻る"
+      ]
+    },
+    {
+      "id": "109:1786",
+      "name": "09b / 振り返り・回答者ごと",
+      "width": 1280,
+      "height": 800,
+      "labels": [
+        "正解発表に戻る"
+      ]
+    },
+    {
+      "id": "115:2027",
+      "name": "07p / お題リスト・参加者",
+      "width": 1280,
+      "height": 800,
+      "labels": [
+        "お題リスト"
+      ]
+    },
+    {
+      "id": "115:2109",
+      "name": "07a / お題リスト・並べ替え後",
+      "width": 1280,
+      "height": 800,
+      "labels": [
+        "お題リスト"
+      ]
+    },
+    {
+      "id": "115:2177",
+      "name": "07b / お題リスト・削除後",
+      "width": 1280,
+      "height": 800,
+      "labels": [
+        "お題リスト"
+      ]
+    },
+    {
+      "id": "119:2809",
+      "name": "07d / お題リスト・ドラッグ中",
+      "width": 1280,
+      "height": 800,
+      "labels": [
+        "お題リスト"
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "id": "VariableID:2:4",
+      "name": "palette/bg",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-bg)"
+      }
+    },
+    {
+      "id": "VariableID:2:5",
+      "name": "color/bg",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:4"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-bg)"
+      }
+    },
+    {
+      "id": "VariableID:2:6",
+      "name": "palette/panel",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.9607843160629272,
+          "g": 0.9764705896377563,
+          "b": 1,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-panel)"
+      }
+    },
+    {
+      "id": "VariableID:2:7",
+      "name": "color/panel",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:6"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-panel)"
+      }
+    },
+    {
+      "id": "VariableID:2:8",
+      "name": "palette/raised",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.9019607901573181,
+          "g": 0.9450980424880981,
+          "b": 1,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-raised)"
+      }
+    },
+    {
+      "id": "VariableID:2:9",
+      "name": "color/raised",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:8"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-raised)"
+      }
+    },
+    {
+      "id": "VariableID:2:10",
+      "name": "palette/border",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.7843137383460999,
+          "g": 0.8509804010391235,
+          "b": 0.9254902005195618,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-border)"
+      }
+    },
+    {
+      "id": "VariableID:2:11",
+      "name": "color/border",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:10"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-border)"
+      }
+    },
+    {
+      "id": "VariableID:2:12",
+      "name": "palette/muted",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.33725491166114807,
+          "g": 0.41960784792900085,
+          "b": 0.5098039507865906,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-muted)"
+      }
+    },
+    {
+      "id": "VariableID:2:13",
+      "name": "color/muted",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:12"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-muted)"
+      }
+    },
+    {
+      "id": "VariableID:2:14",
+      "name": "palette/text",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.09803921729326248,
+          "g": 0.1725490242242813,
+          "b": 0.26274511218070984,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-text)"
+      }
+    },
+    {
+      "id": "VariableID:2:15",
+      "name": "color/text",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:14"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-text)"
+      }
+    },
+    {
+      "id": "VariableID:2:16",
+      "name": "palette/ink",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.062745101749897,
+          "g": 0.1764705926179886,
+          "b": 0.29411765933036804,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-ink)"
+      }
+    },
+    {
+      "id": "VariableID:2:17",
+      "name": "color/ink",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:16"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-ink)"
+      }
+    },
+    {
+      "id": "VariableID:2:18",
+      "name": "palette/paper",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.9411764740943909,
+          "g": 0.9686274528503418,
+          "b": 1,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-paper)"
+      }
+    },
+    {
+      "id": "VariableID:2:19",
+      "name": "color/paper",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:18"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-paper)"
+      }
+    },
+    {
+      "id": "VariableID:2:20",
+      "name": "palette/accent",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.21568627655506134,
+          "g": 0.6313725709915161,
+          "b": 1,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-accent)"
+      }
+    },
+    {
+      "id": "VariableID:2:21",
+      "name": "color/accent",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:20"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-accent)"
+      }
+    },
+    {
+      "id": "VariableID:2:22",
+      "name": "palette/positive",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.07058823853731155,
+          "g": 0.43529412150382996,
+          "b": 0.7098039388656616,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-positive)"
+      }
+    },
+    {
+      "id": "VariableID:2:23",
+      "name": "color/positive",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:22"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-positive)"
+      }
+    },
+    {
+      "id": "VariableID:2:24",
+      "name": "palette/accentSoft",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.8627451062202454,
+          "g": 0.9333333373069763,
+          "b": 1,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-accentSoft)"
+      }
+    },
+    {
+      "id": "VariableID:2:25",
+      "name": "color/accentSoft",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:24"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-accentSoft)"
+      }
+    },
+    {
+      "id": "VariableID:2:26",
+      "name": "palette/accentTint",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.7372549176216125,
+          "g": 0.8705882430076599,
+          "b": 1,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-accentTint)"
+      }
+    },
+    {
+      "id": "VariableID:2:27",
+      "name": "color/accentTint",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:26"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-accentTint)"
+      }
+    },
+    {
+      "id": "VariableID:2:28",
+      "name": "palette/softInk",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.3176470696926117,
+          "g": 0.40392157435417175,
+          "b": 0.4941176474094391,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-softInk)"
+      }
+    },
+    {
+      "id": "VariableID:2:29",
+      "name": "color/softInk",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:28"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-softInk)"
+      }
+    },
+    {
+      "id": "VariableID:2:30",
+      "name": "palette/accentText",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.0313725508749485,
+          "g": 0.4274509847164154,
+          "b": 0.7843137383460999,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-accentText)"
+      }
+    },
+    {
+      "id": "VariableID:2:31",
+      "name": "color/accentText",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:30"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-accentText)"
+      }
+    },
+    {
+      "id": "VariableID:2:32",
+      "name": "space/4",
+      "type": "FLOAT",
+      "values": {
+        "2:1": 4
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-space-4)"
+      }
+    },
+    {
+      "id": "VariableID:2:33",
+      "name": "space/8",
+      "type": "FLOAT",
+      "values": {
+        "2:1": 8
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-space-8)"
+      }
+    },
+    {
+      "id": "VariableID:2:34",
+      "name": "space/12",
+      "type": "FLOAT",
+      "values": {
+        "2:1": 12
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-space-12)"
+      }
+    },
+    {
+      "id": "VariableID:2:35",
+      "name": "space/16",
+      "type": "FLOAT",
+      "values": {
+        "2:1": 16
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-space-16)"
+      }
+    },
+    {
+      "id": "VariableID:2:36",
+      "name": "space/20",
+      "type": "FLOAT",
+      "values": {
+        "2:1": 20
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-space-20)"
+      }
+    },
+    {
+      "id": "VariableID:2:37",
+      "name": "space/24",
+      "type": "FLOAT",
+      "values": {
+        "2:1": 24
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-space-24)"
+      }
+    },
+    {
+      "id": "VariableID:2:38",
+      "name": "space/32",
+      "type": "FLOAT",
+      "values": {
+        "2:1": 32
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-space-32)"
+      }
+    },
+    {
+      "id": "VariableID:2:39",
+      "name": "space/40",
+      "type": "FLOAT",
+      "values": {
+        "2:1": 40
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-space-40)"
+      }
+    },
+    {
+      "id": "VariableID:2:40",
+      "name": "space/48",
+      "type": "FLOAT",
+      "values": {
+        "2:1": 48
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-space-48)"
+      }
+    },
+    {
+      "id": "VariableID:2:41",
+      "name": "space/64",
+      "type": "FLOAT",
+      "values": {
+        "2:1": 64
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-space-64)"
+      }
+    },
+    {
+      "id": "VariableID:2:42",
+      "name": "radius/8",
+      "type": "FLOAT",
+      "values": {
+        "2:1": 8
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-radius-8)"
+      }
+    },
+    {
+      "id": "VariableID:2:43",
+      "name": "radius/12",
+      "type": "FLOAT",
+      "values": {
+        "2:1": 12
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-radius-12)"
+      }
+    },
+    {
+      "id": "VariableID:2:44",
+      "name": "radius/16",
+      "type": "FLOAT",
+      "values": {
+        "2:1": 16
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-radius-16)"
+      }
+    },
+    {
+      "id": "VariableID:2:45",
+      "name": "radius/24",
+      "type": "FLOAT",
+      "values": {
+        "2:1": 24
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-radius-24)"
+      }
+    },
+    {
+      "id": "VariableID:2:46",
+      "name": "radius/999",
+      "type": "FLOAT",
+      "values": {
+        "2:1": 999
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-radius-999)"
+      }
+    },
+    {
+      "id": "VariableID:37:2",
+      "name": "palette/action",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.0313725508749485,
+          "g": 0.4588235318660736,
+          "b": 0.8823529481887817,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-action)"
+      }
+    },
+    {
+      "id": "VariableID:37:3",
+      "name": "color/action",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:37:2"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-action)"
+      }
+    },
+    {
+      "id": "VariableID:37:4",
+      "name": "palette/actionHover",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.0235294122248888,
+          "g": 0.4000000059604645,
+          "b": 0.7803921699523926,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-action-hover)"
+      }
+    },
+    {
+      "id": "VariableID:37:5",
+      "name": "color/actionHover",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:37:4"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-action-hover)"
+      }
+    },
+    {
+      "id": "VariableID:37:6",
+      "name": "palette/actionPressed",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.027450980618596077,
+          "g": 0.3294117748737335,
+          "b": 0.6392157077789307,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-action-pressed)"
+      }
+    },
+    {
+      "id": "VariableID:37:7",
+      "name": "color/actionPressed",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:37:6"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-action-pressed)"
+      }
+    },
+    {
+      "id": "VariableID:37:8",
+      "name": "palette/disabledBg",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.9098039269447327,
+          "g": 0.929411768913269,
+          "b": 0.9529411792755127,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-disabled-bg)"
+      }
+    },
+    {
+      "id": "VariableID:37:9",
+      "name": "color/disabledBg",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:37:8"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-disabled-bg)"
+      }
+    },
+    {
+      "id": "VariableID:37:10",
+      "name": "palette/disabledText",
+      "type": "COLOR",
+      "values": {
+        "2:0": {
+          "r": 0.41960784792900085,
+          "g": 0.46666666865348816,
+          "b": 0.529411792755127,
+          "a": 1
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-palette-disabled-text)"
+      }
+    },
+    {
+      "id": "VariableID:37:11",
+      "name": "color/disabledText",
+      "type": "COLOR",
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:37:10"
+        }
+      },
+      "codeSyntax": {
+        "WEB": "var(--pittan-disabled-text)"
+      }
+    },
+    {
+      "id": "VariableID:92:1035",
+      "name": "history/topic-index-width",
+      "type": "FLOAT",
+      "values": {
+        "92:0": 208,
+        "92:1": 360
+      },
+      "codeSyntax": {}
+    }
+  ],
+  "textStyles": [
+    {
+      "id": "S:2c11107592c7da8e0893971b1bb9f051669d8d06,",
+      "name": "pittan/Display",
+      "fontName": {
+        "family": "Nunito",
+        "style": "ExtraBold",
+        "variationSettings": {
+          "wght": 800
+        }
+      },
+      "fontSize": 64,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 70
+      }
+    },
+    {
+      "id": "S:9ec82492c25d048681914c8f81428cb21b1ae77e,",
+      "name": "pittan/Logo",
+      "fontName": {
+        "family": "Nunito",
+        "style": "ExtraBold",
+        "variationSettings": {
+          "wght": 800
+        }
+      },
+      "fontSize": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 38
+      }
+    },
+    {
+      "id": "S:5309701714ba0bb971c670fc37ea7fdf3a4870a2,",
+      "name": "pittan/Heading",
+      "fontName": {
+        "family": "Noto Sans JP",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "fontSize": 28,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 40
+      }
+    },
+    {
+      "id": "S:69d3eb07ad1a85249a88db91f27b2fc31e616b8e,",
+      "name": "pittan/Title",
+      "fontName": {
+        "family": "Noto Sans JP",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 30
+      }
+    },
+    {
+      "id": "S:6c77cec476461b86fbbd6a73c576f78e7ac7ac52,",
+      "name": "pittan/Body",
+      "fontName": {
+        "family": "Noto Sans JP",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 26
+      }
+    },
+    {
+      "id": "S:f6a34f41bf2e9d66054f57e86aa781ba4a00c458,",
+      "name": "pittan/Label",
+      "fontName": {
+        "family": "Noto Sans JP",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 22
+      }
+    },
+    {
+      "id": "S:ecb439119b96e0c843e850ef72020720781db3ac,",
+      "name": "pittan/Small",
+      "fontName": {
+        "family": "Noto Sans JP",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      }
+    },
+    {
+      "id": "S:9610c14ba39528b4190f29ca116d3ef86f889909,",
+      "name": "pittan/Micro",
+      "fontName": {
+        "family": "Noto Sans JP",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "fontSize": 11,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      }
+    }
+  ]
+}
