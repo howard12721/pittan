@@ -115,9 +115,7 @@ export function Navigation({
         <span className="brand">pittan</span>
         <nav className="desktop-nav">
           {tabs
-            .filter(
-              (t) => !revealed || value !== "history" || t.id !== "topics",
-            )
+            .filter((t) => !revealed || t.id !== "topics")
             .map((t) => (
               <button
                 key={t.id}
