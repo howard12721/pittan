@@ -2403,3 +2403,150 @@ progress::-moz-progress-bar {
 .respondent-index>b{min-width:0;overflow-wrap:anywhere}
 .candidate-list>button{height:auto;min-height:48px;overflow-wrap:anywhere}
 @media(max-width:1023px){.reveal-row{height:auto;min-height:72px}.guess-row{height:auto;min-height:56px}.guess-row>button{overflow-wrap:anywhere;min-width:0}.guess-row>button svg{flex:none}}
+
+/* Revealed prediction review: Figma nodes 202:36 and 202:254. */
+.prediction-heading {
+  display: grid;
+  grid-template-columns: auto 224px minmax(0, 1fr) auto;
+  justify-content: stretch;
+}
+.prediction-heading .score {
+  grid-column: 4;
+}
+.prediction-person-selector {
+  width: 224px;
+  min-width: 0;
+  gap: 8px;
+}
+.prediction-person-selector > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.prediction-status {
+  height: 32px;
+  min-width: 68px;
+  max-width: 180px;
+  margin-left: auto;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.prediction-status.correct {
+  min-width: 92px;
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+.prediction-status.self {
+  color: var(--paper);
+  background: var(--muted);
+}
+.prediction-status.wrong {
+  min-width: 142px;
+  border-color: var(--border);
+  background: var(--paper);
+}
+.prediction-status.unanswered {
+  color: var(--muted);
+  background: var(--raised);
+}
+.prediction-person-list button {
+  gap: 12px;
+  min-height: 64px;
+}
+.prediction-person-list .avatar {
+  width: 36px;
+  height: 36px;
+  flex: none;
+}
+.prediction-person-list button > span {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.prediction-person-list button b,
+.prediction-person-list button small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.prediction-person-list button small {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+.prediction-person-list button[aria-pressed="true"] small {
+  color: #086dc8;
+}
+
+@media (max-width: 1023px) {
+  .prediction-review-page {
+    gap: 16px;
+  }
+  .prediction-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 16px 12px;
+    min-height: auto;
+  }
+  .prediction-heading .score {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .prediction-person-selector {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+  }
+  .prediction-grid .reveal-row > b {
+    min-width: 0;
+    font-size: 20px;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .prediction-status {
+    height: 30px;
+    min-width: 56px;
+    max-width: 96px;
+    padding: 0 9px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  .prediction-status.correct {
+    min-width: 78px;
+  }
+  .prediction-status.wrong {
+    min-width: 86px;
+  }
+  .results-actions-main:has(.prediction-review-button) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-height: auto;
+  }
+  .results-actions-main:has(.prediction-review-button) .button {
+    width: 100%;
+  }
+  .results-actions-main:has(.prediction-review-button) .button:last-child:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+  .prediction-person-list > button {
+    min-height: 64px;
+    height: auto;
+  }
+}

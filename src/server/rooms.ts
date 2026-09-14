@@ -276,6 +276,14 @@ export class Rooms {
       "SELECT count(*) AS n FROM prediction_status WHERE session_id=? AND completed=1",
       s.session_id,
     )!.n;
+    const revealedPredictions =
+      s.phase === "REVEALED"
+        ? all<Prediction & { member_id: string }>(
+            this.db,
+            "SELECT * FROM prediction_status WHERE session_id=? ORDER BY member_id",
+            s.session_id,
+          )
+        : [];
     const publicMembers =
       s.phase === "LOBBY"
         ? this.members(roomId)
@@ -346,7 +354,21 @@ export class Rooms {
         eligibleCount: seats.filter((m) => m.guess_eligible).length,
         completedCount,
       },
-      ...(s.phase === "REVEALED" ? { result: { identities } } : {}),
+      ...(s.phase === "REVEALED"
+        ? {
+            result: {
+              identities,
+              predictions: revealedPredictions.map((prediction) => ({
+                memberId: prediction.member_id,
+                choices: this.choices(s.session_id, prediction.member_id),
+                score: {
+                  correct: prediction.score ?? 0,
+                  total: prediction.score_total ?? 0,
+                },
+              })),
+            },
+          }
+        : {}),
       me: {
         memberId,
         memberVersion: member.version,

@@ -198,6 +198,14 @@ export function fixture(name: string) {
               anonymousId,
               memberId: members[i].memberId,
             })),
+            predictions: members.map((member, i) => ({
+              memberId: member.memberId,
+              choices,
+              score: {
+                correct: i < 10 ? 7 : 8,
+                total: i < 10 ? 9 : 10,
+              },
+            })),
           },
         }
       : {}),

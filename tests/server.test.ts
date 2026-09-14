@@ -198,10 +198,21 @@ describe("server-authoritative game", () => {
         g.cmd(i, "prediction.complete", { choices: correct }).ack.status,
       ).toBe("applied");
     expect(g.view(2).guessing.completedCount).toBe(3);
+    expect(g.view(2).result).toBeUndefined();
     expect(g.cmd(0, "results.reveal").ack.status).toBe("applied");
     expect(g.view(0).me.score).toEqual({ correct: 1, total: 1 });
     expect(g.view(2).me.score).toEqual({ correct: 2, total: 2 });
     expect(g.view(2).result?.identities).toHaveLength(2);
+    expect(g.view(2).result?.predictions).toHaveLength(3);
+    expect(
+      g.view(2).result?.predictions.find(
+        (prediction) => prediction.memberId === g.ids[0],
+      ),
+    ).toEqual({
+      memberId: g.ids[0],
+      choices: correct,
+      score: { correct: 1, total: 1 },
+    });
     const revealedHistory = g.rooms.history(
       g.roomId,
       g.ids[2],
@@ -323,6 +334,16 @@ describe("server-authoritative game", () => {
       g.cmd(0, "results.reveal", { allowIncomplete: true }).ack.status,
     ).toBe("applied");
     expect(g.view(2).me.score).toEqual({ correct: 0, total: 2 });
+    expect(
+      g.view(2).result?.predictions.find(
+        (prediction) => prediction.memberId === g.ids[2],
+      ),
+    ).toEqual({
+      memberId: g.ids[2],
+      choices: { A: null, B: null },
+      score: { correct: 0, total: 2 },
+    });
+    RoomViewSchema.parse(g.view(2));
   });
   it("isolates unpublished history, rooms and old sessions; maintains host and retention", () => {
     const g = game();

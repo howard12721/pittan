@@ -139,6 +139,10 @@ const person = {
   avatarInitial: z.string(),
   avatarUrl: AvatarUrl.optional(),
 };
+const ScoreSchema = z.strictObject({
+  correct: z.number().int().nonnegative(),
+  total: z.number().int().nonnegative(),
+});
 export const AnswerViewSchema = z.strictObject({
   anonymousId: AnonymousId,
   text: z.string(),
@@ -191,6 +195,13 @@ export const RoomViewSchema = z.strictObject({
       identities: z.array(
         z.strictObject({ anonymousId: AnonymousId, memberId: Id }),
       ),
+      predictions: z.array(
+        z.strictObject({
+          memberId: Id,
+          choices: Choices,
+          score: ScoreSchema,
+        }),
+      ),
     })
     .optional(),
   me: z.strictObject({
@@ -215,9 +226,7 @@ export const RoomViewSchema = z.strictObject({
         version: Version,
       })
       .optional(),
-    score: z
-      .strictObject({ correct: z.number(), total: z.number() })
-      .optional(),
+    score: ScoreSchema.optional(),
   }),
 });
 export type RoomView = z.infer<typeof RoomViewSchema>;

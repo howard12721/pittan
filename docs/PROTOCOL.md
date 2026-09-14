@@ -108,7 +108,10 @@ RoomView
     publishedAnswers?: [{ anonymousId, text }]
   }
   guessing: { eligibleCount, completedCount }
-  result?: { identities: [{ anonymousId, memberId }] }
+  result?: {
+    identities: [{ anonymousId, memberId }],
+    predictions: [{ memberId, choices, score: { correct, total } }]
+  }
   me: {
     memberId, memberVersion, role, isHost, myAnonymousId?, guessEligible,
     submission?: { topicId, text, submitted, version },
@@ -117,7 +120,7 @@ RoomView
   }
 ```
 
-membersとrespondentsの配列順は匿名割当から独立。identitiesにmemberIdを加えてよいのはREVEALEDのresult内だけ。myAnonymousIdは本人分のみ。responseにDBの連番answerIdや提出時刻を含めない。
+membersとrespondentsの配列順は匿名割当から独立。identitiesのmemberIdと全員分のpredictionsを加えてよいのはREVEALEDのresult内だけ。公開後のresultはセッション終了まで不変なので、クライアントは同じスナップショットを使って予想者を切り替え、追加取得しない。myAnonymousIdは本人分のみ。responseにDBの連番answerIdや提出時刻を含めない。
 
 提出・取消の途中は公開件数だけが変化する。誰が今提出したか、Aが提出済みか、などの通知は作らない。完了者一覧も返さず人数だけとする。
 

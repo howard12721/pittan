@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IconPlus } from "@tabler/icons-react";
+import { IconChevronDown, IconPlus } from "@tabler/icons-react";
 import { DragDropProvider } from "@dnd-kit/react";
 import { isSortableOperation } from "@dnd-kit/dom/sortable";
 import type {
@@ -434,6 +434,16 @@ export function ResultsScreen({
   onReview: () => void;
   onRestart: () => void;
 }) {
+  const [showPredictions, setShowPredictions] = useState(false);
+  if (showPredictions)
+    return (
+      <PredictionReview
+        room={room}
+        busy={busy}
+        onBack={() => setShowPredictions(false)}
+        onRestart={onRestart}
+      />
+    );
   return (
     <main className="page results-page">
       <div className="results-heading">
@@ -456,9 +466,141 @@ export function ResultsScreen({
           />
         ))}
       </div>
-      <div className="results-actions">
+      <div className="results-actions results-actions-main">
         <Button variant="secondary" onClick={onReview}>
           回答を振り返る
+        </Button>
+        {!!room.result?.predictions.length && (
+          <Button
+            className="prediction-review-button"
+            variant="secondary"
+            onClick={() => setShowPredictions(true)}
+          >
+            みんなの予想
+          </Button>
+        )}
+        {room.me.isHost && (
+          <Button disabled={busy} onClick={onRestart}>
+            もう一度あそぶ
+          </Button>
+        )}
+      </div>
+    </main>
+  );
+}
+
+type RevealedPrediction = NonNullable<
+  RoomView["result"]
+>["predictions"][number];
+
+export function PredictionReview({
+  room,
+  busy,
+  onBack,
+  onRestart,
+}: {
+  room: RoomView;
+  busy: boolean;
+  onBack: () => void;
+  onRestart: () => void;
+}) {
+  const predictions = room.result?.predictions || [];
+  const candidates = room.members.flatMap((person) => {
+    const prediction = predictions.find(
+      (item) => item.memberId === person.memberId,
+    );
+    return prediction ? [{ prediction, person }] : [];
+  });
+  const [selectedMemberId, setSelectedMemberId] = useState(
+    () =>
+      candidates.find(
+        ({ prediction }) => prediction.memberId !== room.me.memberId,
+      )?.prediction.memberId ||
+      candidates[0]?.prediction.memberId ||
+      "",
+  );
+  const [picking, setPicking] = useState(false);
+  const selected =
+    candidates.find(
+      ({ prediction }) => prediction.memberId === selectedMemberId,
+    ) || candidates[0];
+
+  function predictionStatus(
+    prediction: RevealedPrediction,
+    anonymousId: AnonymousId,
+    memberId: string,
+  ) {
+    if (memberId === prediction.memberId)
+      return { kind: "self" as const };
+    const guessedMemberId = prediction.choices[anonymousId];
+    if (!guessedMemberId) return { kind: "unanswered" as const };
+    if (guessedMemberId === memberId) return { kind: "correct" as const };
+    return {
+      kind: "wrong" as const,
+      guessedName:
+        room.respondents.find((person) => person.memberId === guessedMemberId)
+          ?.displayName || "不明",
+    };
+  }
+
+  if (!selected)
+    return (
+      <main className="page results-page">
+        <div className="results-heading">
+          <h2>みんなの予想</h2>
+        </div>
+        <p className="empty-state">公開された予想はありません</p>
+        <div className="results-actions">
+          <Button variant="secondary" onClick={onBack}>
+            正解発表に戻る
+          </Button>
+        </div>
+      </main>
+    );
+
+  return (
+    <main className="page results-page prediction-review-page">
+      <div className="results-heading prediction-heading">
+        <h2>みんなの予想</h2>
+        <Button
+          className="prediction-person-selector"
+          variant="secondary"
+          aria-haspopup="dialog"
+          aria-label={`予想した人を選択。現在 ${selected.person.displayName}`}
+          onClick={() => setPicking(true)}
+        >
+          <span>{selected.person.displayName} の予想</span>
+          <IconChevronDown size={14} aria-hidden />
+        </Button>
+        <div className="score">
+          <b>正解数</b>
+          <strong>
+            {selected.prediction.score.correct} / {selected.prediction.score.total}
+          </strong>
+        </div>
+      </div>
+      <div className="reveal-grid prediction-grid scroll">
+        {room.result?.identities.map((identity) => {
+          const person = room.respondents.find(
+            (respondent) => respondent.memberId === identity.memberId,
+          );
+          return person ? (
+            <RevealRow
+              key={identity.anonymousId}
+              id={identity.anonymousId}
+              person={person}
+              prediction={predictionStatus(
+                selected.prediction,
+                identity.anonymousId,
+                identity.memberId,
+              )}
+            />
+          ) : null;
+        })}
+      </div>
+      <div className="results-actions">
+        <Button variant="secondary" onClick={onBack}>
+          正解発表に戻る
         </Button>
         {room.me.isHost && (
           <Button disabled={busy} onClick={onRestart}>
@@ -466,6 +608,31 @@ export function ResultsScreen({
           </Button>
         )}
       </div>
+      {picking && (
+        <Modal title="予想した人を選択" onClose={() => setPicking(false)}>
+          <div className="candidate-list prediction-person-list">
+            {candidates.map(({ prediction, person }) => (
+              <button
+                type="button"
+                key={prediction.memberId}
+                aria-pressed={prediction.memberId === selected.prediction.memberId}
+                onClick={() => {
+                  setSelectedMemberId(prediction.memberId);
+                  setPicking(false);
+                }}
+              >
+                <Avatar initial={person.avatarInitial} src={person.avatarUrl} />
+                <span>
+                  <b>{person.displayName}</b>
+                  <small>
+                    {prediction.score.correct} / {prediction.score.total} 正解
+                  </small>
+                </span>
+              </button>
+            ))}
+          </div>
+        </Modal>
+      )}
     </main>
   );
 }

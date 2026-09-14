@@ -23,3 +23,14 @@ Original prompt: 回答履歴のお題行全体をクリック可能にし、全
 - デスクトップの表示条件をモバイルと揃え、正体公開後は選択中タブにかかわらずお題タブを除外。
 - 回帰テスト修正後成功。全テスト16件、typecheck、production build、`git diff --check`が成功。
 - 実ブラウザのPC fixtureで、正解発表のプレイ画面と振り返り画面の両方が「プレイ / 振り返り」の2タブだけになることを画像確認。console errorなし。
+
+## 2026-09-14 みんなの正体予想
+
+- 正体公開後の `result` に、公開時点で確定した全予想者の choices と score を含めるようにした。公開前は従来どおり `result` 自体を返さない。
+- 正解発表から「みんなの予想」を開き、予想者を切り替えて各 A〜J の「正解」「本人」「誰と予想」「未回答」を確認できる画面を追加。
+- Figma `202:36`（PC）/ `202:254`（Mobile）の見出し、回答者セレクター、ステータスピル、得点、固定操作を既存コンポーネントとCSS変数で実装。
+- `npm run typecheck`、対象テスト10件、`git diff --check` 成功。
+- PC / 390×844（safe bottom 20px）の `results` fixtureで、正解発表→みんなの予想→候補シート→別ユーザー選択→一覧末尾までスクロール→正解発表へ戻る、を確認。固定操作・下部ナビは維持され、console warning / errorなし。
+- 公開前に全員分の予想を返さないこと、通常公開と未完了公開の両方で確定choices / scoreを返すことをサーバーテストで確認。`docs/PROTOCOL.md`も更新。
+- 全18テスト、typecheck、production build、`git diff --check`成功。
+- TODO: Discord実機iframeでの操作確認は未実施。

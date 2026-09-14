@@ -362,15 +362,41 @@ export function PredictionCompletion({
 export function RevealRow({
   id,
   person,
+  prediction,
 }: {
   id: AnonymousId;
   person: RoomView["respondents"][number];
+  prediction?:
+    | { kind: "correct" }
+    | { kind: "self" }
+    | { kind: "unanswered" }
+    | { kind: "wrong"; guessedName: string };
 }) {
   return (
     <div className="reveal-row">
       <Identity id={id} />
       <Avatar initial={person.avatarInitial} src={person.avatarUrl} />
       <b>{person.displayName}</b>
+      {prediction && (
+        <span className={`prediction-status ${prediction.kind}`}>
+          {prediction.kind === "correct" ? (
+            "✓ 正解"
+          ) : prediction.kind === "self" ? (
+            "本人"
+          ) : prediction.kind === "unanswered" ? (
+            "未回答"
+          ) : (
+            <>
+              <span className="pc-only">
+                × {prediction.guessedName} と予想
+              </span>
+              <span className="mobile-only">
+                × {prediction.guessedName}
+              </span>
+            </>
+          )}
+        </span>
+      )}
     </div>
   );
 }
